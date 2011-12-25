@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>text</key>
+		<string>Harvard Granola</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>8 oz Yogurt</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>8 oz Cottage Cheese</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Plain Bagel</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Wheat Bagel</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Cream Cheese</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Whole Milk</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Skim Milk</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Chocolate Milk</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>8 oz Orange Juice</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Individual Oatmeal</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Individual Cereal</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Daily Muffin</string>
+		<key>checked</key>
+		<false/>
+	</dict>
+</array>
+</plist>

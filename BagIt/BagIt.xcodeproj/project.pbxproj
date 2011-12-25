@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* BagItAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BagItAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		9B8A5DC7148F3E6A0033996D /* PickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC5148F3E6A0033996D /* PickupController.m */; };
+		9B8A5DC8148F3E6A0033996D /* PickupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC6148F3E6A0033996D /* PickupController.xib */; };
+		9B8A5DD4148F3EF80033996D /* ActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DD3148F3EF80033996D /* ActionSheetPicker.m */; };
+		9B8A5DD9148F3F550033996D /* PickupInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DD8148F3F550033996D /* PickupInformation.m */; };
+		9B8A5DDF148F3F870033996D /* NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DDE148F3F870033996D /* NSDate.m */; };
+		9B8A5DE2148F3FA40033996D /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DE1148F3FA40033996D /* NSDate+TCUtils.m */; };
+		9B8A5DEB148F400B0033996D /* BreakfastItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DE9148F400B0033996D /* BreakfastItemController.m */; };
+		9B8A5DEC148F400B0033996D /* BreakfastItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DEA148F400B0033996D /* BreakfastItemController.xib */; };
+		9B8A5DF3148F40350033996D /* SandwichViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DF1148F40350033996D /* SandwichViewController.m */; };
+		9B8A5DF4148F40350033996D /* SandwichViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DF2148F40350033996D /* SandwichViewController.xib */; };
+		9B8A5DFB148F406F0033996D /* SidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DF9148F406F0033996D /* SidesViewController.m */; };
+		9B8A5DFC148F406F0033996D /* SidesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DFA148F406F0033996D /* SidesViewController.xib */; };
+		9B8A5E2A148F41D30033996D /* Sandwich.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5E29148F41D30033996D /* Sandwich.plist */; };
+		9B8A5E2C148F41E90033996D /* Breakfast.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5E2B148F41E90033996D /* Breakfast.plist */; };
+		9B8A5E2F148F42030033996D /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5E2D148F42030033996D /* checked.png */; };
+		9B8A5E30148F42030033996D /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5E2E148F42030033996D /* unchecked.png */; };
+		9BA3AEEB149074D9008046FA /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA3AEEA149074D9008046FA /* NSString+URLEncoding.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* BagItAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagItAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* BagItAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagItAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* BagIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* BagIt_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagIt_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* BagIt-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BagIt-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9B8A5DBC148F3E140033996D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9B8A5DC4148F3E6A0033996D /* PickupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupController.h; sourceTree = "<group>"; };
+		9B8A5DC5148F3E6A0033996D /* PickupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupController.m; sourceTree = "<group>"; };
+		9B8A5DC6148F3E6A0033996D /* PickupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PickupController.xib; path = Classes/PickupController.xib; sourceTree = "<group>"; };
+		9B8A5DD2148F3EF80033996D /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		9B8A5DD3148F3EF80033996D /* ActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetPicker.m; sourceTree = "<group>"; };
+		9B8A5DD7148F3F550033996D /* PickupInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupInformation.h; sourceTree = "<group>"; };
+		9B8A5DD8148F3F550033996D /* PickupInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupInformation.m; sourceTree = "<group>"; };
+		9B8A5DDD148F3F870033996D /* NSDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDate.h; sourceTree = "<group>"; };
+		9B8A5DDE148F3F870033996D /* NSDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate.m; sourceTree = "<group>"; };
+		9B8A5DE0148F3FA40033996D /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
+		9B8A5DE1148F3FA40033996D /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
+		9B8A5DE8148F400B0033996D /* BreakfastItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakfastItemController.h; sourceTree = "<group>"; };
+		9B8A5DE9148F400B0033996D /* BreakfastItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreakfastItemController.m; sourceTree = "<group>"; };
+		9B8A5DEA148F400B0033996D /* BreakfastItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BreakfastItemController.xib; path = Classes/BreakfastItemController.xib; sourceTree = "<group>"; };
+		9B8A5DF0148F40350033996D /* SandwichViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandwichViewController.h; sourceTree = "<group>"; };
+		9B8A5DF1148F40350033996D /* SandwichViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandwichViewController.m; sourceTree = "<group>"; };
+		9B8A5DF2148F40350033996D /* SandwichViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SandwichViewController.xib; path = Classes/SandwichViewController.xib; sourceTree = "<group>"; };
+		9B8A5DF8148F406F0033996D /* SidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidesViewController.h; sourceTree = "<group>"; };
+		9B8A5DF9148F406F0033996D /* SidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidesViewController.m; sourceTree = "<group>"; };
+		9B8A5DFA148F406F0033996D /* SidesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SidesViewController.xib; path = Classes/SidesViewController.xib; sourceTree = "<group>"; };
+		9B8A5E29148F41D30033996D /* Sandwich.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sandwich.plist; sourceTree = "<group>"; };
+		9B8A5E2B148F41E90033996D /* Breakfast.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Breakfast.plist; sourceTree = "<group>"; };
+		9B8A5E2D148F42030033996D /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		9B8A5E2E148F42030033996D /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		9BA3AEE9149074D9008046FA /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		9BA3AEEA149074D9008046FA /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9BA3AEEC149074E0008046FA /* NSString */,
+				9B8A5DF7148F40480033996D /* Sides */,
+				9B8A5DEF148F40230033996D /* Sandwich */,
+				9B8A5DE7148F3FF90033996D /* Breakfast */,
+				9B8A5DDC148F3F7D0033996D /* NSDate */,
+				9B8A5DD1148F3EEA0033996D /* ActionSheetPicker */,
+				9B8A5DC3148F3E540033996D /* Pickup */,
+				9B8A5DBB148F3E000033996D /* Constants */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				1D3623240D0F684500981E51 /* BagItAppDelegate.h */,
+				1D3623250D0F684500981E51 /* BagItAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* BagIt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* BagIt_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5E2D148F42030033996D /* checked.png */,
+				9B8A5E2E148F42030033996D /* unchecked.png */,
+				9B8A5E2B148F41E90033996D /* Breakfast.plist */,
+				9B8A5E29148F41D30033996D /* Sandwich.plist */,
+				9B8A5DFA148F406F0033996D /* SidesViewController.xib */,
+				9B8A5DF2148F40350033996D /* SandwichViewController.xib */,
+				9B8A5DEA148F400B0033996D /* BreakfastItemController.xib */,
+				9B8A5DC6148F3E6A0033996D /* PickupController.xib */,
+				28F335F01007B36200424DE2 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* BagIt-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B8A5DBB148F3E000033996D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DBC148F3E140033996D /* Constants.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9B8A5DC3148F3E540033996D /* Pickup */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DC4148F3E6A0033996D /* PickupController.h */,
+				9B8A5DC5148F3E6A0033996D /* PickupController.m */,
+				9B8A5DD7148F3F550033996D /* PickupInformation.h */,
+				9B8A5DD8148F3F550033996D /* PickupInformation.m */,
+			);
+			name = Pickup;
+			sourceTree = "<group>";
+		};
+		9B8A5DD1148F3EEA0033996D /* ActionSheetPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DD2148F3EF80033996D /* ActionSheetPicker.h */,
+				9B8A5DD3148F3EF80033996D /* ActionSheetPicker.m */,
+			);
+			name = ActionSheetPicker;
+			sourceTree = "<group>";
+		};
+		9B8A5DDC148F3F7D0033996D /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DDD148F3F870033996D /* NSDate.h */,
+				9B8A5DDE148F3F870033996D /* NSDate.m */,
+				9B8A5DE0148F3FA40033996D /* NSDate+TCUtils.h */,
+				9B8A5DE1148F3FA40033996D /* NSDate+TCUtils.m */,
+			);
+			name = NSDate;
+			sourceTree = "<group>";
+		};
+		9B8A5DE7148F3FF90033996D /* Breakfast */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DE8148F400B0033996D /* BreakfastItemController.h */,
+				9B8A5DE9148F400B0033996D /* BreakfastItemController.m */,
+			);
+			name = Breakfast;
+			sourceTree = "<group>";
+		};
+		9B8A5DEF148F40230033996D /* Sandwich */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DF0148F40350033996D /* SandwichViewController.h */,
+				9B8A5DF1148F40350033996D /* SandwichViewController.m */,
+			);
+			name = Sandwich;
+			sourceTree = "<group>";
+		};
+		9B8A5DF7148F40480033996D /* Sides */ = {
+			isa = PBXGroup;
+			children = (
+				9B8A5DF8148F406F0033996D /* SidesViewController.h */,
+				9B8A5DF9148F406F0033996D /* SidesViewController.m */,
+			);
+			name = Sides;
+			sourceTree = "<group>";
+		};
+		9BA3AEEC149074E0008046FA /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				9BA3AEE9149074D9008046FA /* NSString+URLEncoding.h */,
+				9BA3AEEA149074D9008046FA /* NSString+URLEncoding.m */,
+			);
+			name = NSString;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* BagIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "BagIt" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BagIt;
+			productName = BagIt;
+			productReference = 1D6058910D05DD3D006BFB54 /* BagIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BagIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* BagIt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+				9B8A5DC8148F3E6A0033996D /* PickupController.xib in Resources */,
+				9B8A5DEC148F400B0033996D /* BreakfastItemController.xib in Resources */,
+				9B8A5DF4148F40350033996D /* SandwichViewController.xib in Resources */,
+				9B8A5DFC148F406F0033996D /* SidesViewController.xib in Resources */,
+				9B8A5E2A148F41D30033996D /* Sandwich.plist in Resources */,
+				9B8A5E2C148F41E90033996D /* Breakfast.plist in Resources */,
+				9B8A5E2F148F42030033996D /* checked.png in Resources */,
+				9B8A5E30148F42030033996D /* unchecked.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* BagItAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				9B8A5DC7148F3E6A0033996D /* PickupController.m in Sources */,
+				9B8A5DD4148F3EF80033996D /* ActionSheetPicker.m in Sources */,
+				9B8A5DD9148F3F550033996D /* PickupInformation.m in Sources */,
+				9B8A5DDF148F3F870033996D /* NSDate.m in Sources */,
+				9B8A5DE2148F3FA40033996D /* NSDate+TCUtils.m in Sources */,
+				9B8A5DEB148F400B0033996D /* BreakfastItemController.m in Sources */,
+				9B8A5DF3148F40350033996D /* SandwichViewController.m in Sources */,
+				9B8A5DFB148F406F0033996D /* SidesViewController.m in Sources */,
+				9BA3AEEB149074D9008046FA /* NSString+URLEncoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BagIt_Prefix.pch;
+				INFOPLIST_FILE = "BagIt-Info.plist";
+				PRODUCT_NAME = BagIt;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BagIt_Prefix.pch;
+				INFOPLIST_FILE = "BagIt-Info.plist";
+				PRODUCT_NAME = BagIt;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "BagIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BagIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

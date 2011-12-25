@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>text</key>
+		<string>Chef&apos;s Salad</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Turkey</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<true/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Chicken Salad</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<true/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Ham</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<true/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Tuna Salad</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<true/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Egg Salad</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<true/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Tabouleh &amp; Chickpea Pita</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>PB&amp;J</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Gluten-Free Sandwich</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<true/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>3-Cheese</string>
+		<key>needsBread</key>
+		<true/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Plain Bagel &amp; Cream Cheese</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Wheat Bagel &amp; Cream Cheese</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Side Salad</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Gluten-Free Salad</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<true/>
+	</dict>
+</array>
+</plist>
