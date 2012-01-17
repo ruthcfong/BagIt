@@ -46,7 +46,6 @@
 @property (nonatomic, retain) NSArray *dressings;
 @property (nonatomic, assign) NSInteger selectedDressingIndex;
 
-- (void) showAlertWithString: (NSString*) errorMsg;
 - (IBAction) next;
 - (IBAction)selectAnItem:(UIControl *)sender;
 - (void)itemWasSelected:(NSNumber *)selectedIndex element:(id)element;

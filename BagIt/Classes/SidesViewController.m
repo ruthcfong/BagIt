@@ -12,6 +12,7 @@
 #import "ActionSheetPicker.h"
 #import "NSString+URLEncoding.h"
 #import "Constants.h"
+#import "LoginViewController.h"
 
 @implementation SidesViewController
 
@@ -174,6 +175,25 @@
 		
 		// post concatenated string to HUDS via a GET method submission
 		// [self sendGET];
+        
+        // go to login screen
+        LoginViewController* loginController = [[LoginViewController alloc] 
+                                                initWithNibName:@"LoginViewController" bundle:nil];
+        
+        // set login screen's title
+        loginController.title = @"Login";
+        
+        // remember order to submit
+        loginController.orderInfo = 
+        [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@", previousConcat, thisConcat];
+        NSLog(@"Is this the same?:%@", loginController.orderInfo);
+        
+        // Pass the selected object to the new view controller.
+        [self.navigationController pushViewController:loginController animated:YES];
+        
+        // Release controller
+        [loginController release];
+
     }
 	
 	return;

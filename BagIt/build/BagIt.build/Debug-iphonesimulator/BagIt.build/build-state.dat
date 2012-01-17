@@ -1,35 +1,35 @@
 TBagIt
 v7
 r0
-t345530338.439830
+t348271170.858237
 cCheck dependencies
-cProcessInfoPlistFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/Info.plist BagIt-Info.plist
-cCompileXIB /Users/ruthcfong/Desktop/BagIt/MainWindow.xib
-cCompileXIB /Users/ruthcfong/Desktop/BagIt/RootViewController.xib
-cCompileXIB /Users/ruthcfong/Desktop/BagIt/Classes/PickupController.xib
-cCompileXIB /Users/ruthcfong/Desktop/BagIt/Classes/BreakfastItemController.xib
-cCompileXIB /Users/ruthcfong/Desktop/BagIt/Classes/SandwichViewController.xib
-cCompileXIB /Users/ruthcfong/Desktop/BagIt/Classes/SidesViewController.xib
-cCopyPlistFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/Sandwich.plist Sandwich.plist
-cCopyPlistFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/Breakfast.plist Breakfast.plist
+cProcessInfoPlistFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Info.plist BagIt-Info.plist
+cCompileXIB /Users/ruthcfong/BagIt/BagIt/MainWindow.xib
+cCompileXIB /Users/ruthcfong/BagIt/BagIt/RootViewController.xib
+cCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/PickupController.xib
+cCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.xib
+cCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.xib
+cCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.xib
+cCopyPlistFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Sandwich.plist Sandwich.plist
+cCopyPlistFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Breakfast.plist Breakfast.plist
 cCpResource build/Debug-iphonesimulator/BagIt.app/checked.png checked.png
 cCpResource build/Debug-iphonesimulator/BagIt.app/unchecked.png unchecked.png
-cProcessPCH /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch.gch BagIt_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o /Users/ruthcfong/Desktop/BagIt/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o /Users/ruthcfong/Desktop/BagIt/Classes/BagItAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o /Users/ruthcfong/Desktop/BagIt/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o /Users/ruthcfong/Desktop/BagIt/Classes/PickupController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o /Users/ruthcfong/Desktop/BagIt/Classes/ActionSheetPicker.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o /Users/ruthcfong/Desktop/BagIt/Classes/PickupInformation.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o /Users/ruthcfong/Desktop/BagIt/Classes/NSDate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o /Users/ruthcfong/Desktop/BagIt/Classes/NSDate+TCUtils.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o /Users/ruthcfong/Desktop/BagIt/Classes/BreakfastItemController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o /Users/ruthcfong/Desktop/BagIt/Classes/SandwichViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o /Users/ruthcfong/Desktop/BagIt/Classes/SidesViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o /Users/ruthcfong/Desktop/BagIt/Classes/NSString+URLEncoding.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt normal i386
-cGenerateDSYMFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
-cTouch /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app
+cProcessPCH /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch.gch BagIt_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o /Users/ruthcfong/BagIt/BagIt/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o /Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o /Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o /Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o /Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o /Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o /Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o /Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o /Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o /Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o /Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o /Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt normal i386
+cGenerateDSYMFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
+cTouch /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
 c000000004D5C9B4E0000000000000110
@@ -65,6 +65,342 @@ N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3
 c000000004D4F7A2B0000000000001B19
 t1297054251
 s6937
+
+N/Users/ruthcfong/BagIt/BagIt/BagIt_Prefix.pch
+c000000004EDF0612000000000000013C
+t1323238930
+s316
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Breakfast.plist
+c000000004ED9E78000000000000005D9
+t1322903424
+s1497
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.h
+c000000004EDF07870000000000000EBE
+t1323239303
+s3774
+i<Foundation/Foundation.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m
+c000000004EDF07870000000000003B87
+t1323239303
+s15239
+i"ActionSheetPicker.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.h
+c000000004EDF06CB00000000000001C9
+t1323239115
+s457
+i<UIKit/UIKit.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m
+c000000004EDF06CB0000000000000AB4
+t1323239115
+s2740
+i"BagItAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.h
+c000000004EE04CDB000000000000034A
+t1323322587
+s842
+i<UIKit/UIKit.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m
+c000000004EE04EF10000000000002381
+t1323323121
+s9089
+i"BreakfastItemController.h"
+i"NSString+URLEncoding.h"
+i"Constants.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.xib
+c000000004EDF0C0A00000000000042E4
+t1323240458
+s17124
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/Constants.h
+c000000004EE04F520000000000000388
+t1323323218
+s904
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.h
+c000000004EDF0838000000000000013F
+t1323239480
+s319
+i<Foundation/Foundation.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m
+c000000004EE052A600000000000004DF
+t1323324070
+s1247
+i"NSDate+TCUtils.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/NSDate.h
+c000000004EDF08380000000000000149
+t1323239480
+s329
+i<Foundation/Foundation.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m
+c000000004EDF0838000000000000095D
+t1323239480
+s2397
+i"NSDate.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.h
+c000000004EE03E52000000000000010A
+t1323318866
+s266
+i<Foundation/Foundation.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m
+c000000004EE0689E00000000000002BB
+t1323329694
+s699
+i"NSString+URLEncoding.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/PickupController.h
+c000000004EE0469900000000000007EB
+t1323320985
+s2027
+i<UIKit/UIKit.h>
+i"PickupInformation.h"
+i"ActionSheetPicker.h"
+i"BreakfastItemController.h"
+i"SandwichViewController.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m
+c000000004EE05277000000000000284D
+t1323324023
+s10317
+i"PickupController.h"
+i"NSDate+TCUtils.h"
+i"NSDate.h"
+i"Constants.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/PickupController.xib
+c000000004EDF0BAF0000000000008DF7
+t1323240367
+s36343
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.h
+c000000004EE06A5D00000000000003AD
+t1323330141
+s941
+i<Foundation/Foundation.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m
+c000000004EE06A5D0000000000001AF9
+t1323330141
+s6905
+i"PickupInformation.h"
+i"NSDate.h"
+i"Constants.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.h
+c000000004EE0440600000000000001E2
+t1323320326
+s482
+i<UIKit/UIKit.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m
+c000000004EE043EA0000000000000DEE
+t1323320298
+s3566
+i"PickupController.h"
+i"RootViewController.h"
+i"Constants.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.h
+c000000004EE042200000000000000917
+t1323319840
+s2327
+i<UIKit/UIKit.h>
+i"Constants.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m
+c000000004EE04C990000000000004BE1
+t1323322521
+s19425
+i"SandwichViewController.h"
+i"ActionSheetPicker.h"
+i"SidesViewController.h"
+i"Constants.h"
+i"NSString+URLEncoding.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.xib
+c000000004EDF82DD0000000000009F3B
+t1323270877
+s40763
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.h
+c000000004EE0513F000000000000084C
+t1323323711
+s2124
+i<UIKit/UIKit.h>
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m
+c000000004EE050F70000000000003132
+t1323323639
+s12594
+i"SidesViewController.h"
+i"ActionSheetPicker.h"
+i"NSString+URLEncoding.h"
+i"Constants.h"
+
+N/Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.xib
+c000000004EDF831800000000000099DF
+t1323270936
+s39391
+
+N/Users/ruthcfong/BagIt/BagIt/MainWindow.xib
+c000000004EDF06120000000000005FEC
+t1323238930
+s24556
+
+N/Users/ruthcfong/BagIt/BagIt/RootViewController.xib
+c000000004EDF06120000000000004450
+t1323238930
+s17488
+
+N/Users/ruthcfong/BagIt/BagIt/Sandwich.plist
+c000000004ED9F1C60000000000000A77
+t1322906054
+s2679
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o
+t1326571937
+s103852
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagIt.LinkFileList
+c000000004F11E19F00000000000005A0
+t1326571935
+s1440
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o
+t1326571937
+s52900
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o
+t1326571937
+s70684
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o
+t1326571937
+s8828
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o
+t1326571937
+s10456
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o
+t1326571937
+s7520
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o
+t1326571937
+s77748
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o
+t1326571937
+s62012
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o
+t1326571937
+s49260
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o
+t1326571937
+s94240
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o
+t1326571937
+s80696
+
+N/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o
+t1326571937
+s6292
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app
+t1326571937
+s510
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM
+t1326571937
+s102
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
+t1326571937
+s147216
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Breakfast.plist
+t1323240240
+s428
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BreakfastItemController.nib
+t1323240462
+s1547
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Info.plist
+t1323240238
+s583
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/MainWindow.nib
+t1323240239
+s2454
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/PickupController.nib
+t1323240371
+s5278
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/PkgInfo
+t1323240238
+s8
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/RootViewController.nib
+t1323240239
+s1518
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Sandwich.plist
+t1323240240
+s627
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/SandwichViewController.nib
+t1323270882
+s5829
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/SidesViewController.nib
+t1323270940
+s5462
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/checked.png
+t1323240240
+s1346
+
+N/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/unchecked.png
+t1323240240
+s1076
+
+N/Users/ruthcfong/BagIt/BagIt/checked.png
+c0000000049FA55B00000000000000542
+t1241142704
+s1346
+
+N/Users/ruthcfong/BagIt/BagIt/main.m
+c000000004EDF06120000000000000162
+t1323238930
+s354
+i<UIKit/UIKit.h>
+
+N/Users/ruthcfong/BagIt/BagIt/unchecked.png
+c0000000049FA55B00000000000000434
+t1241142704
+s1076
 
 N/Users/ruthcfong/Desktop/BagIt/BagIt_Prefix.pch
 c000000004EDF0612000000000000013C
@@ -433,6 +769,10 @@ N/var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/Shared
 t1323240241
 s15814064
 
+N/var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch.gch
+t1326571936
+s15814064
+
 NBagIt-Info.plist
 c000000004EDF0612000000000000038D
 t1323238930
@@ -440,7 +780,20 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies345530338#345530338#0(0"0(0#1#0"8247620834010738688#0"0#
+lSLF07#2@18"Check dependencies348271170#348271170#0(0"0(0#1#0"8622999936#0"0#
+
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o /Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.111548
+e348264737.309936
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m348264737#348264737#0(0"0(0#0#56"/Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m8607732480#1798"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/ActionSheetPicker.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o0#
 
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o /Users/ruthcfong/Desktop/BagIt/Classes/ActionSheetPicker.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s344933041.352178
@@ -455,6 +808,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@66"Compile /Users/ruthcfong/Desktop/BagIt/Classes/ActionSheetPicker.m344933041#344933041#0(0"0(0#0#58"/Users/ruthcfong/Desktop/BagIt/Classes/ActionSheetPicker.m8633603424#1820"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/ActionSheetPicker.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/ActionSheetPicker.o0#
 
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o /Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264736.965302
+e348264737.139622
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m348264736#348264737#0(0"0(0#0#55"/Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m8608397888#1796"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/BagItAppDelegate.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o0#
+
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o /Users/ruthcfong/Desktop/BagIt/Classes/BagItAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345013127.005098
 e345013127.077820
@@ -467,6 +833,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@65"Compile /Users/ruthcfong/Desktop/BagIt/Classes/BagItAppDelegate.m345013127#345013127#0(0"0(0#0#57"/Users/ruthcfong/Desktop/BagIt/Classes/BagItAppDelegate.m8612323392#1818"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/BagItAppDelegate.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagItAppDelegate.o0#
+
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o /Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.212050
+e348264737.350591
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m348264737#348264737#0(0"0(0#0#62"/Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m8605434336#1810"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o0#
 
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BreakfastItemController.o /Users/ruthcfong/Desktop/BagIt/Classes/BreakfastItemController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345016018.423005
@@ -494,6 +873,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@58"Compile /Users/ruthcfong/Desktop/BagIt/Classes/Constants.m345015061#345015061#0(0"0(0#0#50"/Users/ruthcfong/Desktop/BagIt/Classes/Constants.m8621092544#1804"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/Constants.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/Constants.o0#
 
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o /Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.159667
+e348264737.223075
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m348264737#348264737#0(0"0(0#0#53"/Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m8606867168#1792"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/NSDate+TCUtils.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o0#
+
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o /Users/ruthcfong/Desktop/BagIt/Classes/NSDate+TCUtils.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345016870.323103
 e345016870.437917
@@ -506,6 +898,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@63"Compile /Users/ruthcfong/Desktop/BagIt/Classes/NSDate+TCUtils.m345016870#345016870#0(0"0(0#0#55"/Users/ruthcfong/Desktop/BagIt/Classes/NSDate+TCUtils.m8620614592#1814"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/NSDate+TCUtils.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate+TCUtils.o0#
+
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o /Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.144366
+e348264737.211939
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@53"Compile /Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m348264737#348264737#0(0"0(0#0#45"/Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m8607547136#1776"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/NSDate.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o0#
 
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o /Users/ruthcfong/Desktop/BagIt/Classes/NSDate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s344933041.388916
@@ -520,6 +925,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@55"Compile /Users/ruthcfong/Desktop/BagIt/Classes/NSDate.m344933041#344933041#0(0"0(0#0#47"/Users/ruthcfong/Desktop/BagIt/Classes/NSDate.m8632300864#1798"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/NSDate.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSDate.o0#
 
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o /Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.310037
+e348264737.358222
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m348264737#348264737#0(0"0(0#0#59"/Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m8608471264#1804"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/NSString+URLEncoding.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o0#
+
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o /Users/ruthcfong/Desktop/BagIt/Classes/NSString+URLEncoding.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345022495.826924
 e345022496.061934
@@ -532,6 +950,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@69"Compile /Users/ruthcfong/Desktop/BagIt/Classes/NSString+URLEncoding.m345022495#345022496#0(0"0(0#0#61"/Users/ruthcfong/Desktop/BagIt/Classes/NSString+URLEncoding.m8620656352#1826"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/NSString+URLEncoding.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/NSString+URLEncoding.o0#
+
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o /Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264736.969534
+e348264737.159548
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m348264736#348264737#0(0"0(0#0#55"/Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m8608226720#1796"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/PickupController.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o0#
 
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o /Users/ruthcfong/Desktop/BagIt/Classes/PickupController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345022941.695601
@@ -546,6 +977,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@65"Compile /Users/ruthcfong/Desktop/BagIt/Classes/PickupController.m345022941#345022941#0(0"0(0#0#57"/Users/ruthcfong/Desktop/BagIt/Classes/PickupController.m8619701440#1818"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/PickupController.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupController.o0#
 
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o /Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.139718
+e348264737.259192
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m348264737#348264737#0(0"0(0#0#56"/Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m8607638656#1798"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/PickupInformation.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o0#
+
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o /Users/ruthcfong/Desktop/BagIt/Classes/PickupInformation.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345022941.712203
 e345022941.809555
@@ -558,6 +1002,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@66"Compile /Users/ruthcfong/Desktop/BagIt/Classes/PickupInformation.m345022941#345022941#0(0"0(0#0#58"/Users/ruthcfong/Desktop/BagIt/Classes/PickupInformation.m8617029536#1820"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/PickupInformation.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/PickupInformation.o0#
+
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o /Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264736.967541
+e348264737.144261
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m348264736#348264737#0(0"0(0#0#57"/Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m8608315808#1800"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/RootViewController.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o0#
 
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o /Users/ruthcfong/Desktop/BagIt/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345022941.694705
@@ -572,6 +1029,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@67"Compile /Users/ruthcfong/Desktop/BagIt/Classes/RootViewController.m345022941#345022941#0(0"0(0#0#59"/Users/ruthcfong/Desktop/BagIt/Classes/RootViewController.m8619776960#1822"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/RootViewController.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/RootViewController.o0#
 
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o /Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.223189
+e348264737.386943
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m348264737#348264737#0(0"0(0#0#61"/Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m8608449504#1808"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o0#
+
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o /Users/ruthcfong/Desktop/BagIt/Classes/SandwichViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345016511.624299
 e345016511.755556
@@ -584,6 +1054,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/ruthcfong/Desktop/BagIt/Classes/SandwichViewController.m345016511#345016511#0(0"0(0#0#63"/Users/ruthcfong/Desktop/BagIt/Classes/SandwichViewController.m8616519104#1830"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/SandwichViewController.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SandwichViewController.o0#
+
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o /Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264737.259291
+e348264737.387825
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o
+x/Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m348264737#348264737#0(0"0(0#0#58"/Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m8606857824#1802"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o0#
 
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SidesViewController.o /Users/ruthcfong/Desktop/BagIt/Classes/SidesViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s345016511.625209
@@ -611,6 +1094,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Users/ruthcfong/Desktop/BagIt/Classes/SuperclassViewController.m345011101#345011101#0(0"0(0#0#65"/Users/ruthcfong/Desktop/BagIt/Classes/SuperclassViewController.m8620053600#1834"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/Classes/SuperclassViewController.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/SuperclassViewController.o0#
 
+CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o /Users/ruthcfong/BagIt/BagIt/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264736.939611
+e348264737.111442
+r1
+xCompileC
+xbuild/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o
+x/Users/ruthcfong/BagIt/BagIt/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@43"Compile /Users/ruthcfong/BagIt/BagIt/main.m348264736#348264737#0(0"0(0#0#35"/Users/ruthcfong/BagIt/BagIt/main.m8608531808#1764"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch -c /Users/ruthcfong/BagIt/BagIt/main.m -o /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o0#
+
 CCompileC build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o /Users/ruthcfong/Desktop/BagIt/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s344933041.281213
 e344933041.352087
@@ -623,6 +1119,24 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@45"Compile /Users/ruthcfong/Desktop/BagIt/main.m344933041#344933041#0(0"0(0#0#37"/Users/ruthcfong/Desktop/BagIt/main.m8630203232#1786"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -include /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch -c /Users/ruthcfong/Desktop/BagIt/main.m -o /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/BreakfastItemController.xib
+r0
+
+CCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/PickupController.xib
+r0
+
+CCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/SandwichViewController.xib
+r0
+
+CCompileXIB /Users/ruthcfong/BagIt/BagIt/Classes/SidesViewController.xib
+r0
+
+CCompileXIB /Users/ruthcfong/BagIt/BagIt/MainWindow.xib
+r0
+
+CCompileXIB /Users/ruthcfong/BagIt/BagIt/RootViewController.xib
+r0
 
 CCompileXIB /Users/ruthcfong/Desktop/BagIt/Classes/BreakfastItemController.xib
 s344933261.293819
@@ -672,6 +1186,12 @@ xCompileXIB
 x/Users/ruthcfong/Desktop/BagIt/RootViewController.xib
 lSLF07#2@33"CompileXIB RootViewController.xib344933038#344933039#0(0"0(0#0#53"/Users/ruthcfong/Desktop/BagIt/RootViewController.xib8630765056#560"    cd /Users/ruthcfong/Desktop/BagIt    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/RootViewController.nib /Users/ruthcfong/Desktop/BagIt/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
+CCopyPlistFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Breakfast.plist Breakfast.plist
+r0
+
+CCopyPlistFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Sandwich.plist Sandwich.plist
+r0
+
 CCopyPlistFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/Breakfast.plist Breakfast.plist
 s344933039.997954
 e344933040.115251
@@ -708,6 +1228,15 @@ xbuild/Debug-iphonesimulator/BagIt.app/unchecked.png
 xunchecked.png
 lSLF07#2@18"Copy unchecked.png344933040#344933040#0(0"0(0#0#44"/Users/ruthcfong/Desktop/BagIt/unchecked.png8633246144#445"    cd /Users/ruthcfong/Desktop/BagIt    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/ruthcfong/Desktop/BagIt/unchecked.png /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app0#
 
+CGenerateDSYMFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
+s348264737.672246
+e348264737.764137
+r1
+xGenerateDSYMFile
+x/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM
+x/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
+lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/BagIt.app.dSYM build/Debug-iphonesimulator/BagIt.app/BagIt348264737#348264737#0(0"0(0#0#72"/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt8607907552#347"    cd /Users/ruthcfong/BagIt/BagIt    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt -o /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM0#
+
 CGenerateDSYMFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
 s345022942.168978
 e345022942.345697
@@ -716,6 +1245,16 @@ xGenerateDSYMFile
 x/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM
 x/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
 lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/BagIt.app.dSYM build/Debug-iphonesimulator/BagIt.app/BagIt345022942#345022942#0(0"0(0#0#74"/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt8619974336#353"    cd /Users/ruthcfong/Desktop/BagIt    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt -o /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app.dSYM0#
+
+CLd /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt normal i386
+s348264737.387873
+e348264737.672089
+r1
+xLd
+x/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
+xnormal
+xi386
+lSLF07#2@77"Link /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt348264737#348264737#0(0"0(0#0#0"8608356704#840"    cd /Users/ruthcfong/BagIt/BagIt    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -filelist /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagIt.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt0#
 
 CLd /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt normal i386
 s345022941.828505
@@ -726,6 +1265,9 @@ x/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt
 xnormal
 xi386
 lSLF07#2@79"Link /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt345022941#345022942#0(0"0(0#0#0"8612888160#850"    cd /Users/ruthcfong/Desktop/BagIt    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -filelist /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/Objects-normal/i386/BagIt.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/BagIt0#
+
+CProcessInfoPlistFile /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app/Info.plist BagIt-Info.plist
+r0
 
 CProcessInfoPlistFile /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app/Info.plist BagIt-Info.plist
 s344933038.381009
@@ -748,6 +1290,27 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@27"Precompile BagIt_Prefix.pch344933040#344933041#0(0"0(0#0#47"/Users/ruthcfong/Desktop/BagIt/BagIt_Prefix.pch8630691552#1688"    cd /Users/ruthcfong/Desktop/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/Desktop/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -c /Users/ruthcfong/Desktop/BagIt/BagIt_Prefix.pch -o /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-crgteksircnmjhgbbhleexevaltj/BagIt_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch.gch BagIt_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s348264736.000599
+e348264736.939511
+r1
+xProcessPCH
+x/var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch.gch
+xBagIt_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile BagIt_Prefix.pch348264736#348264736#0(0"0(0#0#45"/Users/ruthcfong/BagIt/BagIt/BagIt_Prefix.pch8536971543994791936#1668"    cd /Users/ruthcfong/BagIt/BagIt    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-generated-files.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-own-target-headers.hmap -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-all-target-headers.hmap -iquote /Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/BagIt-project-headers.hmap -F/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator -I/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/include -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources/i386 -I/Users/ruthcfong/BagIt/BagIt/build/BagIt.build/Debug-iphonesimulator/BagIt.build/DerivedSources -c /Users/ruthcfong/BagIt/BagIt/BagIt_Prefix.pch -o /var/folders/0w/0wOfEkqmHlOI95HFlhQgz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BagIt_Prefix-emikndymqcjyvocqakxcptdiiejo/BagIt_Prefix.pch.gch0#
+
+CTouch /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app
+s348264737.764201
+e348264737.766143
+r1
+xTouch
+x/Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app
+lSLF07#2@72"Touch /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app348264737#348264737#0(0"0(0#0#0"8607887776#256"    cd /Users/ruthcfong/BagIt/BagIt    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ruthcfong/BagIt/BagIt/build/Debug-iphonesimulator/BagIt.app0#
 
 CTouch /Users/ruthcfong/Desktop/BagIt/build/Debug-iphonesimulator/BagIt.app
 s345022942.345762

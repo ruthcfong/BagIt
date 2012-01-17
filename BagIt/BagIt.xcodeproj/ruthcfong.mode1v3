@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9B15196514993D35003CE78F</string>
+										<string>9BE40BD014C23EA600110CFC</string>
 										<key>history</key>
 										<array>
 											<string>9B8A5E17148F419D0033996D</string>
@@ -357,7 +357,7 @@
 											<string>9B9B1D651490A1E900DF8299</string>
 											<string>9B9B1D661490A1E900DF8299</string>
 											<string>9B9B1D671490A1E900DF8299</string>
-											<string>9BF478F41493341F00C57629</string>
+											<string>9BE40B4514C21BEA00110CFC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -415,9 +415,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>9B15195B14985FE3003CE78F</string>
+				<string>9BE40BAA14C2324500110CFC</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>9B15195C14985FE3003CE78F</string>
+				<string>9BE40BAB14C2324500110CFC</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -555,10 +555,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>9B8A5D98148F3DA40033996D</string>
-		<string>/Users/ruthcfong/Desktop/BagIt/BagIt.xcodeproj</string>
+		<string>/Users/ruthcfong/BagIt/BagIt/BagIt.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1280 719 0 0 1280 778 </string>
@@ -638,7 +638,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>9B8A5D98148F3DA40033996D</string>
-				<string>9B15195D14985FE3003CE78F</string>
+				<string>9BE40BAC14C2324500110CFC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -760,13 +760,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>9B15195E14985FE3003CE78F</string>
+				<string>9BE40BAD14C2324500110CFC</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>9B15195F14985FE3003CE78F</string>
-				<string>9B15196014985FE3003CE78F</string>
-				<string>9B15196114985FE3003CE78F</string>
-				<string>9B15196214985FE3003CE78F</string>
-				<string>9B15196314985FE3003CE78F</string>
+				<string>9BE40BAE14C2324500110CFC</string>
+				<string>9BE40BAF14C2324500110CFC</string>
+				<string>9BE40BB014C2324500110CFC</string>
+				<string>9BE40BB114C2324500110CFC</string>
+				<string>9BE40BB214C2324500110CFC</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -885,6 +885,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -920,7 +922,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>9B15196414985FE3003CE78F</string>
+				<string>9BE40BB314C2324500110CFC</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

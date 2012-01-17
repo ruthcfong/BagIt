@@ -9,10 +9,12 @@
 #import "PickupController.h"
 #import "RootViewController.h"
 #import "Constants.h"
+#import "UserInformation.h"
 
+#import "SelectionViewController.h"
 @implementation RootViewController
 
-@synthesize meals, pickupController;
+@synthesize meals, pickupController, user;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -35,12 +37,12 @@
 	self.title = @"Select a Meal";
 }
 
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:
-	(UIInterfaceOrientation)interfaceOrientation 
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:
+(UIInterfaceOrientation)interfaceOrientation 
 {
-	 // Return YES for supported orientations.
-	 return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // Return YES for supported orientations.
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 
@@ -56,7 +58,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView 
-	numberOfRowsInSection:(NSInteger)section 
+ numberOfRowsInSection:(NSInteger)section 
 {
 	// let view know that the number of cells in the table equals
 	// the number of different types of meals (i.e. 3)
@@ -90,33 +92,50 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	
-	// initialize the next view controller to accept pickup information
-	pickupController = [[PickupController alloc] 
-						initWithNibName:@"PickupController" bundle:nil];
-	
-	// set the title of next view to the type of meal that's being ordered
-	switch (indexPath.row) 
-	{
-		case BREAKFAST:
-			pickupController.title = @"Breakfast";
-			break;
-		case LUNCH:
-			pickupController.title = @"Lunch";
-			break;
-		case DINNER:
-			pickupController.title = @"Dinner";
-			break;
-		default:
-			pickupController.title = @"Error";
-			break;
-	}
-	
-	// Pass the selected object to the new view controller.
-	[self.navigationController pushViewController:pickupController animated:YES];
-	
-	// Release controller
-	[pickupController release];
+    
+    // prepare to select a meal
+    /*SelectionViewController* selectionController = [[SelectionViewController alloc] 
+                                                    initWithNibName:@"SelectionViewController" 
+                                                    bundle:nil];
+    
+    // go to the next view if correct HUID & PIN has been entered
+    //if (isAuthenticated) 
+    {
+        selectionController.user = user;
+        
+        // display the next view
+        [self.navigationController pushViewController:selectionController 
+                                             animated:YES];
+    }
+    
+    [selectionController release];*/
+    
+     // initialize the next view controller to accept pickup information
+     pickupController = [[PickupController alloc] 
+     initWithNibName:@"PickupController" bundle:nil];
+     
+     // set the title of next view to the type of meal that's being ordered
+     switch (indexPath.row) 
+     {
+     case BREAKFAST:
+     pickupController.title = @"Breakfast";
+     break;
+     case LUNCH:
+     pickupController.title = @"Lunch";
+     break;
+     case DINNER:
+     pickupController.title = @"Dinner";
+     break;
+     default:
+     pickupController.title = @"Error";
+     break;
+     }
+     
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:pickupController animated:YES];
+     
+     // Release controller
+     [pickupController release];
 }
 
 
@@ -141,6 +160,7 @@
 - (void)dealloc {
 	[meals release];
 	[pickupController release];
+    [user release];
     [super dealloc];
 }
 

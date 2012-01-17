@@ -13,7 +13,8 @@
 #import	"SidesViewController.h"
 #import "Constants.h"
 #import "NSString+URLEncoding.h"
-
+//#import "UIViewController+Addons.h"
+#import "NSObject+Addons.h"
 @implementation SandwichViewController
 
 // instance variables
@@ -41,27 +42,6 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo;
 {
 	isFirstSandwich = isFirst;
 	return self;
-}
-
-/* (void)
- * showAlertWithString: (NSString*) errorMsg
- *
- * Displays an error message detailing what the user did wrong.
- */
-- (void) showAlertWithString: (NSString*) errorMsg
-{
-	// create error alert
-	UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-													  message:errorMsg
-													 delegate:nil 
-											cancelButtonTitle:@"OK" 
-											otherButtonTitles:nil];
-	
-	// display alert
-	[message show];
-	
-	// release memory
-	[message release];
 }
 
 /* (void)

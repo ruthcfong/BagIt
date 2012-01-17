@@ -9,7 +9,7 @@
 #import "BreakfastItemController.h"
 #import "NSString+URLEncoding.h"
 #import "Constants.h"
-
+#import "LoginViewController.h"
 
 @implementation BreakfastItemController
 
@@ -59,7 +59,25 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     if([title isEqualToString:@"Submit"])
     {
 		// if so, display concatenated string
-        NSLog(@"Copy & Paste this string:%@%@", pickupConcat, thisConcat);
+        NSLog(@"Copy & Paste this string:http://www.dining.harvard.edu/myhuds/students/%@%@", pickupConcat, thisConcat);
+        
+        // go to login screen
+        LoginViewController* loginController = [[LoginViewController alloc] 
+                                               initWithNibName:@"LoginViewController" bundle:nil];
+        
+        // set login screen's title
+        loginController.title = @"Login";
+        
+        // remember order to submit
+        loginController.orderInfo = 
+            [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@", pickupConcat, thisConcat];
+        NSLog(@"Is this the same?:%@", loginController.orderInfo);
+        
+        // Pass the selected object to the new view controller.
+        [self.navigationController pushViewController:loginController animated:YES];
+        
+        // Release controller
+        [loginController release];
     }
 	
 	return;

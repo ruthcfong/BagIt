@@ -7,18 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UserInformation.h"
 @class PickupController;
 
-@interface RootViewController : UITableViewController 
+@interface RootViewController : UIViewController
 {
 	// instance variables
 	NSArray *meals;
 	PickupController *pickupController;
+    UserInformation *user;
 }
 
 // getter/setter prototypes
 @property (nonatomic, retain) IBOutlet PickupController *pickupController;
 @property (nonatomic, retain) NSArray *meals;
+@property (nonatomic, retain) UserInformation* user;
 
 @end
