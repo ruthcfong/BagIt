@@ -11,6 +11,7 @@
 #import "NSDate.h"
 #import "Constants.h"
 #import "UserInformation.h"
+#import "SelectionViewController.h"
 
 @implementation PickupController
 
@@ -28,6 +29,7 @@
 @synthesize selectedTimeIndex = _selectedTimeIndex;
 @synthesize selectedDateIndex = _selectedDateIndex;
 @synthesize actionSheetPicker = _actionSheetPicker;
+
 
 - (void) viewDidLoad
 {
@@ -109,7 +111,7 @@
 	self.dateObjects = nil;
 	self.displayTimes = nil;
     self.actionSheetPicker = nil;
-	self.user = nil;
+	//self.user = nil;
     
     [super viewDidUnload];
 }
@@ -194,7 +196,7 @@
             
 			// set the view controller's title
 			sandwichController.title = @"Entree 1";
-			
+            
 			// display the view
 			[self.navigationController pushViewController:sandwichController 
 												 animated:YES];
@@ -344,7 +346,7 @@
 	[self.dateObjects release];
 	[self.displayTimes release];
     [self.actionSheetPicker release];
-    [self.user release];
+    //[self.user release];
     [super dealloc];
 }
 

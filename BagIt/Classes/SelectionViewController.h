@@ -22,5 +22,4 @@
 @property (nonatomic, retain) IBOutlet PickupController *pickupController;
 @property (nonatomic, retain) NSArray *meals;
 @property (nonatomic, retain) UserInformation* user;
-
 @end

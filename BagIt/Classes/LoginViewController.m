@@ -44,7 +44,9 @@
     
     // setup the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-	    
+    
+    if (user != nil)
+        NSLog(@"Username: %@ Password: %@", user.huid, user.pin);
     // remember the user's id and pin
     user = [[UserInformation alloc] initWithHUID:username.text andPIN:password.text];
     

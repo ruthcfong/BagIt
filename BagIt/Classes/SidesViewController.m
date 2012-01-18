@@ -17,7 +17,8 @@
 #import "UserInformation.h"
 #import "CJSONDeserializer.h"
 #import "NSObject+Addons.h"
-
+#import "SelectionViewController.h"
+#import "SandwichViewController.h"
 @implementation SidesViewController
 
 // synthesize instance variables
@@ -47,6 +48,9 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 
 - (void)connectionDidFinishLoading:(NSURLConnection*)connection
 {
+    // this is how we stop spinning
+    [NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
+
     NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
     NSLog(@"%@", str);
     
@@ -66,12 +70,12 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
             NSLog(@"Yay!");
 			
             // delete user information
-            [self.user release];
-            [self.user initWithHUID:@"" andPIN:@""];
+            //[self.user release];
+            //[self.user initWithHUID:@"" andPIN:@""];
             
             // create popup alert
-            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"What Now?"
-                                                              message:@"Do you want to logout or place another order?"
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Order Submitted"
+                                                              message:@"Your order has been successfully submitted.\n\nDo you want to logout or place another order?"
                                                              delegate:self
                                                     cancelButtonTitle:@"Order"
                                                     otherButtonTitles:@"Logout", nil];
@@ -293,6 +297,9 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
         
         [myConnection start];
         
+        // this is how we start spinning
+        [NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
+
         //[NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
 
     }
@@ -312,7 +319,40 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
     // check if the user wants to place another order
     else if([title isEqualToString:@"Order"])
     {
-        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:NO];
+        /*int count = [self.navigationController.viewControllers count];
+        SandwichViewController* prevController = [self.navigationController.viewControllers objectAtIndex:count-2];
+        
+        prevController.anotherOrder = true;
+        
+        [self.navigationController popViewControllerAnimated: NO];*/
+        
+        SelectionViewController * selectionViewController = [self.navigationController.viewControllers objectAtIndex:1];
+        //selectionViewController.user = [[UserInformation alloc] initWithUser:user];
+        [self.navigationController popToViewController:selectionViewController animated:NO];
+       
+        /*
+        // initialize the next view to select a meal
+        SelectionViewController *selectionViewController = 
+        [[SelectionViewController alloc] 
+         initWithNibName:@"SelectionViewController" bundle:nil];
+        
+        // set the view controller's title
+        selectionViewController.title = @"Select a meal";
+        
+        // pass user information to next view
+        selectionViewController.user = user;
+        
+        // display the view
+        [self.navigationController pushViewController:selectionViewController 
+                                             animated:YES]; 
+        
+       //[self.navigationController popViewControllerAnimated: NO];
+         */
+        
+        /*int count = [self.navigationController.viewControllers count];
+        
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];*/
+
 
     }
     
@@ -569,7 +609,7 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 	self.drinks = nil;
 	self.fruits = nil;
 	self.snacks = nil;
-    self.user = nil;
+    //self.user = nil;
 }
 
 
@@ -579,7 +619,7 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 	[self.drinks release];
 	[self.fruits release];
 	[self.snacks release];
-	[self.user release];
+	//[self.user release];
     [super dealloc];
 }
 

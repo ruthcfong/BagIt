@@ -16,7 +16,7 @@
 //#import "UIViewController+Addons.h"
 #import "NSObject+Addons.h"
 #import "UserInformation.h"
-
+#import "PickupController.h"
 @implementation SandwichViewController
 
 // instance variables
@@ -93,7 +93,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			
             // pass user information to next sandwich's controller
             sandwichController2.user = user;
-            
+                        
 			// display the next screen
 			[self.navigationController pushViewController:sandwichController2 
 												 animated:YES];
@@ -121,7 +121,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			
             // pass the user information to the side view
             sidesViewController.user = user;
-            
+                        
 			// display the view
 			[self.navigationController pushViewController:sidesViewController 
 												 animated:YES];
@@ -634,7 +634,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	self.breads = nil;
 	self.cheeses = nil;
 	self.dressings = nil;
-    self.user = nil;
+    //self.user = nil;
 }
 
 
@@ -645,7 +645,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	[self.breads release];
 	[self.cheeses release];
 	[self.dressings release];
-    [self.user release];
+    //[self.user release];
     [super dealloc];
 }
 

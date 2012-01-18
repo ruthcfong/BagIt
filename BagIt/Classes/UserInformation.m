@@ -31,4 +31,14 @@
     return self;
 }
 
+- (id) initWithUser: (UserInformation*) otherUser
+{
+    //[self init];
+    
+    self.huid = [NSString stringWithString:otherUser.huid];//[NSString stringWithString:username];
+    self.pin = [NSString stringWithString:otherUser.pin];//[NSString stringWithString:password];
+    return self;
+}
+
+
 @end

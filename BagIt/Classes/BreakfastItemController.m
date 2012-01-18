@@ -16,7 +16,7 @@
 
 @implementation BreakfastItemController
 
-@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork;
+@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, cLoadingView;
 
 @synthesize data = _data;
 
@@ -34,6 +34,9 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection*)connection
 {
+    // this is how we stop spinning
+    [NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
+
     NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
     NSLog(@"%@", str);
     
@@ -53,12 +56,12 @@
             NSLog(@"Yay!");
 			
             // delete user information
-            [self.user release];
-            [self.user initWithHUID:@"" andPIN:@""];
+            //[self.user release];
+            //[self.user initWithHUID:@"" andPIN:@""];
             
             // create popup alert
-            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"What Now?"
-                                                              message:@"Do you want to logout or place another order?"
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Order Submitted."
+                                                              message:@"Your order has been successfully submitted.\n\nDo you want to logout or place another order?"
                                                              delegate:self
                                                     cancelButtonTitle:@"Order"
                                                     otherButtonTitles:@"Logout", nil];
@@ -80,6 +83,9 @@
     {
         NSLog(@"%@", error);
     }
+    
+    [error release];
+    [str release];
     
 }
 
@@ -179,6 +185,9 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
         
         NSURLConnection *myConnection = [NSURLConnection connectionWithRequest:request delegate:self];
         
+        // this is how we start spinning
+        [NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
+
         [myConnection start];
         
         //[NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
@@ -190,7 +199,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     {
         // delete user information
         [user release];
-        
         
         // Go back to the root controller
         [self.navigationController popToRootViewControllerAnimated:NO];
@@ -212,6 +220,27 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 	return;
 }
 
+- (void)initSpinner {
+    cLoadingView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];    
+    [cLoadingView setBackgroundColor:[UIColor blackColor]];
+     // we put our spinning "thing" right in the center of the current view
+     CGPoint newCenter = (CGPoint) [self.view center];
+     cLoadingView.center = newCenter;
+     [self.view addSubview:cLoadingView];
+    
+    /*cLoadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView: cLoadingView];
+    self.navigationItem.rightBarButtonItem = activityButton;*/
+    
+}
+
+- (void)spinBegin {
+    [cLoadingView startAnimating];
+}
+
+- (void)spinEnd {
+    [cLoadingView stopAnimating];
+}
 
 /* (void)
  * done
@@ -345,12 +374,17 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 - (void)viewDidUnload
 {
 	self.dataArray = nil;
+    self.data = nil;
+    self.thisConcat = nil;
 }
 
 
 - (void)dealloc
 {	
     [dataArray release];
+    [thisConcat release];
+    //[self.data release];
+    
 	[super dealloc];
 }
 

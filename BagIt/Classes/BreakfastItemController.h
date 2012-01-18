@@ -22,6 +22,7 @@
     UserInformation* user;
     NSMutableData* data;
     NSString* dWork;
+    UIActivityIndicatorView* cLoadingView;
 }
 
 // declare setters/getters methods
@@ -34,6 +35,11 @@
 @property (nonatomic, retain) UserInformation* user;
 @property (retain, nonatomic) NSMutableData* data;
 @property (retain, nonatomic) NSString* dWork;
+@property (nonatomic, retain) UIActivityIndicatorView *cLoadingView;
+
+- (void)initSpinner;
+- (void)spinBegin;
+- (void)spinEnd;
 
 // method prototypes
 - (void) done;

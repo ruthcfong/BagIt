@@ -116,7 +116,7 @@
     
     // pass user information to pickup view
     pickupController.user = user;
-	
+	    
 	// Pass the selected object to the new view controller.
 	[self.navigationController pushViewController:pickupController animated:YES];
 	
