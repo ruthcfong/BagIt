@@ -13,6 +13,10 @@
 #define LUNCH 1
 #define DINNER 2
 
+// For ConnectionDelegate.m
+#define LOGOUT "Logout"
+#define ORDER "Order"
+
 // For SidesViewController.m
 #define UNSELECTED 0
 #define	NUM_OF_SIDES 4

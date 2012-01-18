@@ -8,7 +8,7 @@
 
 #import "BagItAppDelegate.h"
 #import "RootViewController.h"
-
+//#import "LoginViewController.h"
 
 @implementation BagItAppDelegate
 
@@ -25,6 +25,7 @@
     
     // Set the navigation controller as the window's root view controller and display.
     self.window.rootViewController = self.navigationController;
+    //self.window.loginViewController = self.navigationController;
     [self.window makeKeyAndVisible];
 	
     return YES;

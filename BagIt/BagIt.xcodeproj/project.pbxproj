@@ -23,6 +23,7 @@
 		9B65829114C3AFBC001DB11F /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65829014C3AFBC001DB11F /* ConnectionDelegate.m */; };
 		9B65829614C3E48E001DB11F /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65829414C3E48E001DB11F /* SelectionViewController.m */; };
 		9B65829714C3E48E001DB11F /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B65829514C3E48E001DB11F /* SelectionViewController.xib */; };
+		9B68B10A14C608AE0024364B /* SubmissionSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B68B10914C608AE0024364B /* SubmissionSuperViewController.m */; };
 		9B8A5DC7148F3E6A0033996D /* PickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC5148F3E6A0033996D /* PickupController.m */; };
 		9B8A5DC8148F3E6A0033996D /* PickupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC6148F3E6A0033996D /* PickupController.xib */; };
 		9B8A5DD4148F3EF80033996D /* ActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DD3148F3EF80033996D /* ActionSheetPicker.m */; };
@@ -80,6 +81,8 @@
 		9B65829314C3E48E001DB11F /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
 		9B65829414C3E48E001DB11F /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		9B65829514C3E48E001DB11F /* SelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionViewController.xib; sourceTree = "<group>"; };
+		9B68B10814C608AE0024364B /* SubmissionSuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionSuperViewController.h; sourceTree = "<group>"; };
+		9B68B10914C608AE0024364B /* SubmissionSuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionSuperViewController.m; sourceTree = "<group>"; };
 		9B8A5DBC148F3E140033996D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9B8A5DC4148F3E6A0033996D /* PickupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupController.h; sourceTree = "<group>"; };
 		9B8A5DC5148F3E6A0033996D /* PickupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupController.m; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9B68B10714C608720024364B /* Submission Superclass */,
 				9B0A5D2C14C4DB6500B07FBB /* New Group */,
 				9BF2CB0D14C4CCD7000E5BAD /* CJSONDeserializer */,
 				9B65829214C3E471001DB11F /* Selection */,
@@ -264,6 +268,15 @@
 				9B65829514C3E48E001DB11F /* SelectionViewController.xib */,
 			);
 			name = Selection;
+			sourceTree = "<group>";
+		};
+		9B68B10714C608720024364B /* Submission Superclass */ = {
+			isa = PBXGroup;
+			children = (
+				9B68B10814C608AE0024364B /* SubmissionSuperViewController.h */,
+				9B68B10914C608AE0024364B /* SubmissionSuperViewController.m */,
+			);
+			name = "Submission Superclass";
 			sourceTree = "<group>";
 		};
 		9B8A5DBB148F3E000033996D /* Constants */ = {
@@ -468,6 +481,7 @@
 				9BF2CB2B14C4D16A000E5BAD /* CDataScanner_Extensions.m in Sources */,
 				9B0A5D2F14C4DBA300B07FBB /* UIViewController+Addons.m in Sources */,
 				9B0A5D3214C4DDB100B07FBB /* NSObject+Addons.m in Sources */,
+				9B68B10A14C608AE0024364B /* SubmissionSuperViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +499,7 @@
 				GCC_PREFIX_HEADER = BagIt_Prefix.pch;
 				INFOPLIST_FILE = "BagIt-Info.plist";
 				PRODUCT_NAME = BagIt;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};

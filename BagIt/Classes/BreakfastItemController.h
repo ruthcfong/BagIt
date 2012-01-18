@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInformation.h"
 
 @interface BreakfastItemController : UITableViewController 
 {
@@ -18,7 +19,9 @@
 	NSString *prevOrderInfo;
 	NSMutableString *orderInfo;
 	NSString *thisConcat;
-	
+    UserInformation* user;
+    NSMutableData* data;
+    NSString* dWork;
 }
 
 // declare setters/getters methods
@@ -28,6 +31,9 @@
 @property (nonatomic, retain) NSString *prevOrderInfo;
 @property (nonatomic, retain) NSMutableString *orderInfo;
 @property (nonatomic, retain) NSString *thisConcat;
+@property (nonatomic, retain) UserInformation* user;
+@property (retain, nonatomic) NSMutableData* data;
+@property (retain, nonatomic) NSString* dWork;
 
 // method prototypes
 - (void) done;

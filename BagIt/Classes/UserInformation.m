@@ -9,6 +9,7 @@
 #import "UserInformation.h"
 #import "NSString+URLEncoding.h"
 @implementation UserInformation
+
 @synthesize huid, pin;
 
 - (id)init
@@ -25,8 +26,8 @@
 {
     //[self init];
     
-    huid = [NSString urlEncodeValue:username];//[NSString stringWithString:username];
-    pin = [NSString urlEncodeValue:password];//[NSString stringWithString:password];
+    self.huid = [NSString urlEncodeValue:username];//[NSString stringWithString:username];
+    self.pin = [NSString urlEncodeValue:password];//[NSString stringWithString:password];
     return self;
 }
 

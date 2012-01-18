@@ -111,6 +111,11 @@
 			pickupController.title = @"Error";
 			break;
 	}
+    
+    NSLog(@"User: %@ Password: %@", user.huid, user.pin);
+    
+    // pass user information to pickup view
+    pickupController.user = user;
 	
 	// Pass the selected object to the new view controller.
 	[self.navigationController pushViewController:pickupController animated:YES];
@@ -135,6 +140,7 @@
     // For example: self.myOutlet = nil;
 	self.meals = nil;
 	self.pickupController = nil;
+    self.user = nil;
 }
 
 

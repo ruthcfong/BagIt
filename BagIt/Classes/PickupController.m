@@ -10,12 +10,13 @@
 #import "NSDate+TCUtils.h"
 #import "NSDate.h"
 #import "Constants.h"
+#import "UserInformation.h"
 
 @implementation PickupController
 
 // instance variables
 @synthesize pickupInfo, locationText, dateText, timeText,
-	breakfastItemController, sandwichController;
+	breakfastItemController, sandwichController, user;
 
 @synthesize locations = _locations;
 @synthesize times = _times;
@@ -108,7 +109,8 @@
 	self.dateObjects = nil;
 	self.displayTimes = nil;
     self.actionSheetPicker = nil;
-	
+	self.user = nil;
+    
     [super viewDidUnload];
 }
 
@@ -157,6 +159,9 @@
 			// set the view controller's title
 			breakfastItemController.title = @"Select 5 items";
 			
+            // pass user information to breakfast view
+            breakfastItemController.user = user;
+            
 			// display the view
 			[self.navigationController pushViewController:breakfastItemController 
 												 animated:YES];
@@ -184,6 +189,9 @@
 			// pass the sandwich controller the order information
 			sandwichController.prevOrderInfo = [pickupInfo orderInfo];
 			
+            // pass user information to sandwich view
+            sandwichController.user = user;
+            
 			// set the view controller's title
 			sandwichController.title = @"Entree 1";
 			
@@ -336,6 +344,7 @@
 	[self.dateObjects release];
 	[self.displayTimes release];
     [self.actionSheetPicker release];
+    [self.user release];
     [super dealloc];
 }
 

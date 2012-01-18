@@ -10,10 +10,97 @@
 #import "NSString+URLEncoding.h"
 #import "Constants.h"
 #import "LoginViewController.h"
+#import "CJSONDeserializer.h"
+#import "ConnectionDelegate.h"
+#import "NSObject+Addons.h"
 
 @implementation BreakfastItemController
 
-@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat;
+@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork;
+
+@synthesize data = _data;
+
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        self.data = [[NSMutableData alloc] init];
+    }
+    
+    return self;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection*)connection
+{
+    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", str);
+    
+    NSError* error = nil;
+    NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
+                                                                                     error:&error];
+    if (!error) 
+    {
+        NSLog(@"%@", [responseData valueForKey:@"didWork"]);
+        // iterate over all returned data
+        //NSMutableArray* courses = [[NSMutableArray alloc] init];
+        //didWork = 
+        dWork = [responseData valueForKey:@"didWork"];
+        
+        if ([dWork isEqualToString:@"yes"]) 
+        {
+            NSLog(@"Yay!");
+			
+            // delete user information
+            [self.user release];
+            [self.user initWithHUID:@"" andPIN:@""];
+            
+            // create popup alert
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"What Now?"
+                                                              message:@"Do you want to logout or place another order?"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Order"
+                                                    otherButtonTitles:@"Logout", nil];
+            
+            // show alert
+            [message show];
+            
+            // release memory
+            [message release];
+        }
+        else
+        {
+            // display error message
+            [self showAlertWithString: @"Order couldn't be submitted. Please try again."];
+        }
+        
+    }
+    else
+    {
+        NSLog(@"%@", error);
+    }
+    
+}
+
+
+- (void)connection:(NSURLConnection*)connection didReceiveData:(NSData *)data
+{
+    [self.data appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    [self.data setLength:0];
+    NSLog(@"Yay! Connection was made.");
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"Boo hoo. Something went terribly wrong.");
+    NSLog(@"The error is as follows:%@", error);
+}
+
 
 /* (void)
  * showSubmitAlert
@@ -55,33 +142,76 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 	// remember button's name
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
 	
+    NSLog(@"Title: %@", title);
 	// check if "Submit" button was clicked
     if([title isEqualToString:@"Submit"])
     {
 		// if so, display concatenated string
-        NSLog(@"Copy & Paste this string:http://www.dining.harvard.edu/myhuds/students/%@%@", pickupConcat, thisConcat);
+        NSLog(@"Copy & Paste this string:%@%@", pickupConcat, thisConcat);
+		
+        NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@", 
+                            pickupConcat, thisConcat];
         
-        // go to login screen
-        LoginViewController* loginController = [[LoginViewController alloc] 
-                                               initWithNibName:@"LoginViewController" bundle:nil];
+        // remember the url
+        NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
         
-        // set login screen's title
-        loginController.title = @"Login";
+        // setup the request
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
         
-        // remember order to submit
-        loginController.orderInfo = 
-            [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@", pickupConcat, thisConcat];
-        NSLog(@"Is this the same?:%@", loginController.orderInfo);
+        //NSLog(@"HUID: %@    PIN: %@", user.huid, user.pin);
         
-        // Pass the selected object to the new view controller.
-        [self.navigationController pushViewController:loginController animated:YES];
+        // setup the data to be submitted
+        NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&order=%@", user.huid, user.pin, [NSString urlEncodeValue:getURL]]dataUsingEncoding:NSUTF8StringEncoding];
         
-        // Release controller
-        [loginController release];
+        // setup HTTP headers
+        [request setHTTPMethod:@"POST"];
+        [request setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,*//*;q=0.8" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+        [request setHTTPBody: requestData];
+        
+        //ConnectionDelegate* d = [[ConnectionDelegate alloc] init];
+        
+        // setup connection and start the connection
+        
+        // initialize a data object to save HTTP response body
+        self.data = [[NSMutableData alloc] init];
+        
+        NSURLConnection *myConnection = [NSURLConnection connectionWithRequest:request delegate:self];
+        
+        [myConnection start];
+        
+        //[NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
+        
     }
+    
+    // check if the logout button was clicked
+    else if([title isEqualToString:@"Logout"])
+    {
+        // delete user information
+        [user release];
+        
+        
+        // Go back to the root controller
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        
+    }
+    
+    // check if the user wants to place another order
+    else if([title isEqualToString:@"Order"])
+    {
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:NO];
+    }
+    
+    // log error because unrecognized alert
+    /*else
+     {
+     
+     }*/
 	
 	return;
 }
+
 
 /* (void)
  * done

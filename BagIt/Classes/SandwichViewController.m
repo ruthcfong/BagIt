@@ -15,11 +15,13 @@
 #import "NSString+URLEncoding.h"
 //#import "UIViewController+Addons.h"
 #import "NSObject+Addons.h"
+#import "UserInformation.h"
+
 @implementation SandwichViewController
 
 // instance variables
 @synthesize itemLabel, itemText, breadText, cheeseText, dressingText, nextButton, 
-isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo;
+isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 
 @synthesize selectedIndex = _selectedIndex;
 @synthesize dataArray = _dataArray;
@@ -89,6 +91,9 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo;
 			// remember whether a chef's salad was ordered
 			sandwichController2.selectedChefs = selectedChefs;
 			
+            // pass user information to next sandwich's controller
+            sandwichController2.user = user;
+            
 			// display the next screen
 			[self.navigationController pushViewController:sandwichController2 
 												 animated:YES];
@@ -114,6 +119,9 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo;
 			// set the view controller's title
 			sidesViewController.title = @"Sides";
 			
+            // pass the user information to the side view
+            sidesViewController.user = user;
+            
 			// display the view
 			[self.navigationController pushViewController:sidesViewController 
 												 animated:YES];
@@ -626,6 +634,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo;
 	self.breads = nil;
 	self.cheeses = nil;
 	self.dressings = nil;
+    self.user = nil;
 }
 
 
@@ -636,6 +645,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo;
 	[self.breads release];
 	[self.cheeses release];
 	[self.dressings release];
+    [self.user release];
     [super dealloc];
 }
 
