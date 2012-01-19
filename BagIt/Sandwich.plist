@@ -4,6 +4,16 @@
 <array>
 	<dict>
 		<key>text</key>
+		<string>select</string>
+		<key>needsBread</key>
+		<false/>
+		<key>needsCheese</key>
+		<false/>
+		<key>needsDressing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>text</key>
 		<string>Chef&apos;s Salad</string>
 		<key>needsBread</key>
 		<false/>

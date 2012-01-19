@@ -20,7 +20,8 @@
 @implementation SandwichViewController
 
 // instance variables
-@synthesize itemLabel, itemText, breadText, cheeseText, dressingText, nextButton, 
+@synthesize itemLabel, optionalLabel, chefsNoteLabel, itemText, breadText, 
+cheeseText, dressingText, nextButton, 
 isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 
 @synthesize selectedIndex = _selectedIndex;
@@ -90,7 +91,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			
 			// remember whether a chef's salad was ordered
 			sandwichController2.selectedChefs = selectedChefs;
-			
+			            
             // pass user information to next sandwich's controller
             sandwichController2.user = user;
                         
@@ -182,11 +183,20 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 		
 	}
 	
+    /*
 	// if this is the first sandwich, remember whether or not
 	// a chef's salad was selected
 	if (isFirstSandwich) 
 	{
 		selectedChefs = (self.selectedIndex == CHEFS_SALAD) ? YES: NO;
+        
+        // display 
+        if (selectedChefs)
+        {
+            [chefsNoteLabel setText:@"*The Chef's Salad counts as two items. If you order the Chef Salad, other salads or sandwiches will be ignored."];
+            [chefsNoteLabel setHidden:false];
+        }
+
 	}
 	// if the user tries to order a chef's salad and another entree,
 	// yell at the user
@@ -201,7 +211,7 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 		[concat release];
 		
 		return nil;
-	}
+	}*/
 	
 	
 	// get information about selected item
@@ -369,6 +379,11 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	// initialize array to store item names
 	self.itemNames = [[NSMutableArray alloc] initWithCapacity:len];
 	
+    /*
+    // add blank selection
+	[self.itemNames addObject:@"select"];
+     */
+    
 	// generate array of item names
 	for (int i = 0; i < len; i++) 
 	{
@@ -380,8 +395,9 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 		
 	}
 	
+    /*
 	// add blank selection
-	[self.itemNames addObject:@"select"];
+	[self.itemNames addObject:@"select"];*/
 	
 	// remember types of breads, cheeses, and dressings
 	self.breads = [[NSArray alloc] initWithObjects:@"select", @"White Bread", 
@@ -407,15 +423,21 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	[self dressingWasSelected: [NSNumber numberWithInteger:self.selectedDressingIndex] 
 					  element:dressingText];
 
-	// set item label accordingly
+	// set text labels according to whether the view represents the first or second entree
 	if (isFirstSandwich) 
 	{
 		[itemLabel setText:@"Item 1"];
+        [optionalLabel setHidden:true];
+        
 	}
 	else 
 	{
 		[itemLabel setText:@"Item 2"];
+        [optionalLabel setHidden:false];
 	}
+    
+    // hide the chef's salad note initially
+    [chefsNoteLabel setHidden:true];
 	
 }
 
@@ -481,6 +503,47 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 		self.selectedCheeseIndex = UNSELECTED_SIDE;
 	if (![[item objectForKey:@"needsDressing"] boolValue]) 
 		self.selectedDressingIndex = UNSELECTED_SIDE;
+    
+    // if this is the first sandwich, remember whether or not
+	// a chef's salad was selected
+	if (isFirstSandwich) 
+	{
+		selectedChefs = (self.selectedIndex == CHEFS_SALAD) ? YES: NO;
+        
+        // if a chef's salad was ordered, display the note about chef's salad
+        if (selectedChefs)
+        {
+            /*[chefsNoteLabel setText:@"*The Chef's Salad counts as two items. If you order the Chef Salad, other salads or sandwiches will be ignored."];*/
+            [chefsNoteLabel setHidden:false];
+        }
+        
+	}
+	// if the user tries to order a chef's salad and another entree,
+	// yell at the user
+	else if (selectedChefs || self.selectedIndex == CHEFS_SALAD)
+	{
+        // if a chef's salad was ordered, display the note about chef's salad
+        /*[chefsNoteLabel setText:@"*The Chef's Salad counts as two items. If you order the Chef Salad, other salads or sandwiches will be ignored."];*/
+        [chefsNoteLabel setHidden:false];
+        
+        /*
+		// show error message
+		[self showAlertWithString:
+		 @"A chef's salad counts as two entrees. You can't order other entrees \
+		 with a chef's salad. Please change your order accordingly."];
+		
+		// release memory
+		[concat release];
+		
+		return nil;*/
+	}
+    
+    // hide the note if a chef's salad hasn't been ordered
+    if(selectedChefs == false && self.selectedIndex != CHEFS_SALAD)
+    {
+        [chefsNoteLabel setHidden:true];
+    }
+
 	
 }
 

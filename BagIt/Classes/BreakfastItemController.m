@@ -221,12 +221,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 }
 
 - (void)initSpinner {
-    cLoadingView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];    
+    /*cLoadingView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];    
     [cLoadingView setBackgroundColor:[UIColor blackColor]];
      // we put our spinning "thing" right in the center of the current view
      CGPoint newCenter = (CGPoint) [self.view center];
      cLoadingView.center = newCenter;
-     [self.view addSubview:cLoadingView];
+     [self.view addSubview:cLoadingView];*/
+    
+    cLoadingView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+	cLoadingView.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+	cLoadingView.center = self.view.center;
+	[self.view addSubview: cLoadingView];
+
     
     /*cLoadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView: cLoadingView];

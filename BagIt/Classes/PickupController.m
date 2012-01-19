@@ -76,11 +76,17 @@
 	// fill keys and object arrays with 7 days starting with tomorrow
 	for (int i = 0; i < DAYS_IN_WEEK; i++) 
 	{
+        // check if the order is being made before 4am
+        NSDate* fourAM = [NSDate dateWithNaturalLanguageString:@"today at 4am"];
+        NSDate* today = [NSDate date];
+        int startDate = ([today compare:fourAM] == NSOrderedAscending) ? 0 : 1;
+        NSLog(@"%i", startDate);
+        
 		// create a NSDate object that's i days after tomorrow
 		// and add to an array of NSDate objects
 		[self.dateObjects addObject: [[NSDate date] 
 									  dateByAdddingCalendarUnits:NSDayCalendarUnit 
-									  amount:+1+i]];
+									  amount:+startDate+i]];
 		
 		// create and add the string version of the just-created date
 		// to an array of keys

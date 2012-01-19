@@ -12,6 +12,8 @@
 @interface SandwichViewController : UIViewController 
 {
 	IBOutlet UILabel *itemLabel;
+    IBOutlet UILabel *optionalLabel;
+    IBOutlet UILabel *chefsNoteLabel;
 	IBOutlet UITextField *itemText;
 	IBOutlet UITextField *breadText;
 	IBOutlet UITextField *cheeseText;
@@ -26,6 +28,8 @@
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *itemLabel;
+@property (nonatomic, retain) IBOutlet UILabel *optionalLabel;
+@property (nonatomic, retain) IBOutlet UILabel *chefsNoteLabel;
 @property (nonatomic, retain) IBOutlet UITextField *itemText;
 @property (nonatomic, retain) IBOutlet UITextField *breadText;
 @property (nonatomic, retain) IBOutlet UITextField *cheeseText;

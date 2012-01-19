@@ -23,10 +23,10 @@
 #define ON_SECOND_SNACK 3
 
 // For SandwichViewController.m
-#define UNSELECTED_ITEM 14
+#define UNSELECTED_ITEM 0
 #define UNSELECTED_SIDE 0
 #define	NO_CHEESE 1
-#define CHEFS_SALAD 0
+#define CHEFS_SALAD 1
 
 // For PickupInformation.m
 #define IS_DATE 1
