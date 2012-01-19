@@ -258,26 +258,19 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 	// remember button's name
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
 	
-    NSLog(@"Title: %@", title);
 	// check if "Submit" button was clicked
     if([title isEqualToString:@"Submit"])
     {
-		// if so, display concatenated string
-        NSLog(@"Copy & Paste this string:%@%@", previousConcat, thisConcat);
-		
-        NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@", 
-                             previousConcat, thisConcat];
+        NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",previousConcat, thisConcat];
         
         // remember the url
         NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
         
         // setup the request
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-        
-        NSLog(@"HUID: %@    PIN: %@", user.huid, user.pin);
-        
+                
         // setup the data to be submitted
-        NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&order=%@", user.huid, user.pin, [NSString urlEncodeValue:getURL]]dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&url=%@", user.huid, user.pin, [NSString urlEncodeValue:getURL]]dataUsingEncoding:NSUTF8StringEncoding];
         
         // setup HTTP headers
         [request setHTTPMethod:@"POST"];

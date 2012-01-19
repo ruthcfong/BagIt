@@ -37,28 +37,17 @@
     // this is how we stop spinning
     [NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
 
-    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", str);
-    
+    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];    
     NSError* error = nil;
     NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
                                                                                      error:&error];
     if (!error) 
     {
         NSLog(@"%@", [responseData valueForKey:@"didWork"]);
-        // iterate over all returned data
-        //NSMutableArray* courses = [[NSMutableArray alloc] init];
-        //didWork = 
         dWork = [responseData valueForKey:@"didWork"];
         
         if ([dWork isEqualToString:@"yes"]) 
-        {
-            NSLog(@"Yay!");
-			
-            // delete user information
-            //[self.user release];
-            //[self.user initWithHUID:@"" andPIN:@""];
-            
+        {			            
             // create popup alert
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Order Submitted."
                                                               message:@"Your order has been successfully submitted.\n\nDo you want to logout or place another order?"
@@ -148,26 +137,19 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 	// remember button's name
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
 	
-    NSLog(@"Title: %@", title);
 	// check if "Submit" button was clicked
     if([title isEqualToString:@"Submit"])
-    {
-		// if so, display concatenated string
-        NSLog(@"Copy & Paste this string:%@%@", pickupConcat, thisConcat);
-		
-        NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@", 
-                            pickupConcat, thisConcat];
+    {		
+        NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",  pickupConcat, thisConcat];
         
         // remember the url
         NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
         
         // setup the request
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-        
-        //NSLog(@"HUID: %@    PIN: %@", user.huid, user.pin);
-        
+                
         // setup the data to be submitted
-        NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&order=%@", user.huid, user.pin, [NSString urlEncodeValue:getURL]]dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&url=%@", user.huid, user.pin, [NSString urlEncodeValue:getURL]]dataUsingEncoding:NSUTF8StringEncoding];
         
         // setup HTTP headers
         [request setHTTPMethod:@"POST"];
@@ -255,10 +237,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
  * otherwise, shows next view.
  */
 - (void) done
-{
-	// Debugging
-	// NSLog(@"Number of checked items: %i", selected);
-	
+{	
 	NSString *errorMsg = nil;
 	if (selected == MIN_BREAKFAST_LIMIT) {
 		errorMsg = @"You have not selected any items.";

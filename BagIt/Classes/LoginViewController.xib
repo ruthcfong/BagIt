@@ -182,11 +182,12 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="164062040"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
+					<int key="NSColorSpace">5</int>
+					<bytes key="NSCMYK">MC4wNTgyNTg5NTA3MSAwLjAxMjIzNzcyNzY0IDAuMTY0MjMzNTgwMiAwLjAyNTU0NzQ0NDgyIDAuMQA</bytes>
 					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
+						<int key="NSID">3</int>
 					</object>
+					<characters key="NSComponents">0.05825895071 0.01223772764 0.1642335766 0.02554744526 0.1</characters>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

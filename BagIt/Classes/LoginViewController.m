@@ -44,9 +44,7 @@
     
     // setup the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    
-    if (user != nil)
-        NSLog(@"Username: %@ Password: %@", user.huid, user.pin);
+
     // remember the user's id and pin
     user = [[UserInformation alloc] initWithHUID:username.text andPIN:password.text];
     
@@ -56,8 +54,8 @@
     //NSLog(@"%@", orderInfo);
     
     // setup the data to be submitted
-    NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&order=%@", user.huid, user.pin, [NSString urlEncodeValue:orderInfo]]dataUsingEncoding:NSUTF8StringEncoding];
-    
+    NSData *requestData = [[NSString stringWithFormat:@"huid=%@&password=%@&url=%@", user.huid, user.pin, [NSString urlEncodeValue:orderInfo]]dataUsingEncoding:NSUTF8StringEncoding];
+        
     // setup HTTP headers
 	[request setHTTPMethod:@"POST"];
 	[request setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,*//*;q=0.8" forHTTPHeaderField:@"Accept"];

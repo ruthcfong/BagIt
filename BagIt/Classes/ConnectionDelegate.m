@@ -32,7 +32,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection*)connection
 {
     NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", str);
     
     NSError* error = nil;
     NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
@@ -121,18 +120,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 - (void)connection:(NSURLConnection*)connection didReceiveData:(NSData *)data
 {
     [self.data appendData:data];
-    /*NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", str);*/
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     [self.data setLength:0];
-    NSLog(@"Yay! Connection was made.");// Response data is %@", self.data);
-    /*NSString *responseBody = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", responseBody);
-    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", str);*/
+    NSLog(@"Yay! Connection was made.");
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
