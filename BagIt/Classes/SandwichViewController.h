@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 #import "UserInformation.h"
+#import "Order.h"
+
 @interface SandwichViewController : UIViewController 
 {
 	IBOutlet UILabel *itemLabel;
@@ -25,6 +27,9 @@
 	NSString *prevOrderInfo;
 	NSMutableString *orderInfo;
     UserInformation* user;
+    Order* order;
+    NSMutableString* entreeOrdered;
+
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *itemLabel;
@@ -40,7 +45,9 @@
 @property (nonatomic, retain) NSString *previousConcat;
 @property (nonatomic, retain) NSString *prevOrderInfo;
 @property (nonatomic, retain) NSMutableString *orderInfo;
+@property (nonatomic, retain) NSMutableString *entreeOrdered;
 @property (nonatomic, retain) UserInformation* user;
+@property (nonatomic, retain) Order* order;
 
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, retain) NSArray *dataArray;

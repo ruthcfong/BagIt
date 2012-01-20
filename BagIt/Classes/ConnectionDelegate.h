@@ -7,19 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class LoginViewController;
+#import "MBProgressHUD.h"
 
 @interface ConnectionDelegate : NSObject
 {
-    bool didWork;
-    NSString* dWork;
+    NSString* didWork;
+    UIAlertView* message;
+    MBProgressHUD* loadingModal;
 }
 
 @property (retain, nonatomic) NSMutableData* data;
-@property (retain, nonatomic) NSString* dWork;
-@property (assign, nonatomic) bool didWork;
-@property (retain, nonatomic) LoginViewController* loginViewController;
+@property (retain, nonatomic) NSString* didWork;
+@property (retain, nonatomic) UIViewController* viewController;
+@property (retain, nonatomic) UIViewController* nextViewController;
+@property (retain, nonatomic) UIAlertView *message;
+@property (retain, nonatomic) MBProgressHUD* loadingModal;
 
 - (void)alertView:(UIAlertView *)alertView 
 clickedButtonAtIndex:(NSInteger)buttonIndex;

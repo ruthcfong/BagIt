@@ -12,12 +12,13 @@
 #import "Constants.h"
 #import "UserInformation.h"
 #import "SelectionViewController.h"
+#import "Order.h"
 
 @implementation PickupController
 
 // instance variables
 @synthesize pickupInfo, locationText, dateText, timeText,
-	breakfastItemController, sandwichController, user;
+	breakfastItemController, sandwichController, user, order, foodsOrdered;
 
 @synthesize locations = _locations;
 @synthesize times = _times;
@@ -117,6 +118,7 @@
 	self.dateObjects = nil;
 	self.displayTimes = nil;
     self.actionSheetPicker = nil;
+    self.foodsOrdered = nil;
 	//self.user = nil;
     
     [super viewDidUnload];
@@ -142,6 +144,15 @@
 						   self.selectedTimeIndex-1];
 	}
 	
+    
+    // save pickup options
+    NSMutableArray* selectedPickupOptions = [[NSMutableArray alloc] initWithCapacity:4];
+    [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedIndex]];
+    [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedDateIndex]];
+    [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedTimeIndex]];
+    order.selectedPickupOptions = selectedPickupOptions;
+    foodsOrdered = [[NSMutableString alloc] initWithString:@""];
+    
 	// display either the breakfast item or sandwich item view,
 	// depending on meal
 	if (pickupInfo.meal == BREAKFAST) 
@@ -167,10 +178,12 @@
 			// set the view controller's title
 			breakfastItemController.title = @"Select 5 items";
 			
-            // pass user information to breakfast view
+            // pass user and order information to breakfast view
             breakfastItemController.user = user;
+            breakfastItemController.order = order;
+            breakfastItemController.foodsOrdered = foodsOrdered;
             
-			// display the view
+            // display the view
 			[self.navigationController pushViewController:breakfastItemController 
 												 animated:YES];
 			
@@ -197,8 +210,9 @@
 			// pass the sandwich controller the order information
 			sandwichController.prevOrderInfo = [pickupInfo orderInfo];
 			
-            // pass user information to sandwich view
+            // pass user and order information to sandwich view
             sandwichController.user = user;
+            sandwichController.order = order;
             
 			// set the view controller's title
 			sandwichController.title = @"Entree 1";
@@ -352,6 +366,7 @@
 	[self.dateObjects release];
 	[self.displayTimes release];
     [self.actionSheetPicker release];
+    [self.foodsOrdered release];
     //[self.user release];
     [super dealloc];
 }

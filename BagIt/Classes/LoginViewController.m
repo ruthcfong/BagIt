@@ -12,10 +12,11 @@
 #import "SelectionViewController.h"
 #import "NSObject+Addons.h"
 #import "CJSONDeserializer.h"
+#import "ConnectionDelegate.h"
 
 @implementation LoginViewController
 
-@synthesize username, password, user, orderInfo, responseData, didWork, cLoadingView;
+@synthesize username, password, user, orderInfo, responseData, didWork, cLoadingView, loadingModal;
 
 - (IBAction) textFieldReturn: (id) sender
 {
@@ -25,12 +26,16 @@
 
 - (IBAction) backgroundTouched: (id) sender
 {
-	[sender resignFirstResponder];
+    [username resignFirstResponder];
+    [password resignFirstResponder];
 }
 
 -(IBAction)submit:(id)sender
 {
 
+    // hide keyboard
+    [self backgroundTouched:sender];
+    
     // check that a username and password has been entered in
     if ([username.text isEqualToString:@""] || [password.text isEqualToString:@""]) 
     {
@@ -66,18 +71,34 @@
     // initialize a data object to save HTTP response body
     responseData = [[NSMutableData alloc] init];
     
+    /*ConnectionDelegate* d = [[ConnectionDelegate alloc] init];
+    d.viewController = self;
+    // initialize the next view to select a meal
+    SelectionViewController *selectionViewController = 
+    [[SelectionViewController alloc] 
+     initWithNibName:@"SelectionViewController" bundle:nil];
+    
+    // set the view controller's title
+    selectionViewController.title = @"Select a meal";
+    
+    // create popup alert
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"What Now?"
+                                                      message:@"Do you want to logout or place another order?"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Order"
+                                            otherButtonTitles:@"Logout", nil];
+
+    // pass to the connection delegate
+    d.nextViewController = selectionViewController;
+    d.message = message;*/
     // setup connection and start the connection
     NSURLConnection *myConnection = [NSURLConnection connectionWithRequest:request delegate:self];
 
     [myConnection start];
     
-    // this is how we start spinning
-    [NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
-    
-    //[NSThread sleepForTimeInterval:3];
-    
-    //[NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
-
+    // show loading modal
+    loadingModal = [[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES] retain];
+    loadingModal.labelText = @"Loading";
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -108,47 +129,12 @@
 
 - (void)viewDidLoad
 {
-    [self initSpinner];
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
     password.secureTextEntry = YES;
     self.title = @"Login";
-    /*UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tapGesture];
-    [tapGesture release];*/
 }
-/*- (void)handleTapGesture:(UITapGestureRecognizer *)sender
-{
-    if (sender.state == UIGestureRecognizerStateEnded) 
-    {
-        // handling code
-        [username resignFirstResponder];
-        [password resignFirstResponder];
-    }
-}*/
-
-- (void)initSpinner {
-    /*cLoadingView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];    
-    // we put our spinning "thing" right in the center of the current view
-    CGPoint newCenter = (CGPoint) [self.view center];
-    cLoadingView.center = newCenter;
-    [self.view addSubview:cLoadingView];*/
-    
-    cLoadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView: cLoadingView];
-    self.navigationItem.rightBarButtonItem = activityButton;
-
-}
-
-- (void)spinBegin {
-    [cLoadingView startAnimating];
-}
-
-- (void)spinEnd {
-    [cLoadingView stopAnimating];
-}
-
 
 - (void)viewDidUnload
 {
@@ -161,7 +147,7 @@
     self.orderInfo = nil;
     self.responseData = nil;
     self.didWork = nil;
-    self.cLoadingView = nil;
+    self.loadingModal = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -170,21 +156,36 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection*)connection
+#pragma mark -
+#pragma mark NSURLConnectionDelegete
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
 {
-    // stop waiting...
-    [NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
+    [responseData setLength:0];
+    NSLog(@"Yay! Connection was made.");
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
+{
+    // save received data
+    [responseData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection 
+{
+    // hide loading modal
+	[loadingModal hide:YES];
     
     NSError* error = nil;
     NSDictionary* responseDictionary = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData
-                                                                                     error:&error];
+                                                                                           error:&error];
+    
     if (!error) 
     {
-        // debug
-        //NSLog(@"%@", [responseDictionary valueForKey:@"didWork"]);
         didWork = [responseDictionary valueForKey:@"didWork"];
         
-        if ([didWork isEqualToString:@"yes"]) 
+        NSLog(@"%@", didWork);
+        //if ([didWork isEqualToString:@"yes"]) 
         {
             NSLog(@"Yay!");
             
@@ -201,37 +202,29 @@
             
 			// display the view
 			[self.navigationController pushViewController:selectionViewController 
-                                                                animated:YES];
+                                                 animated:YES];
             
         }
-        else
-        {
+        /*else
+        {   
             // display error message
             [self showAlertWithString: @"Invalid HUID and/or PIN."];
-        }
+        }*/
     }
     else
     {
         NSLog(@"%@", error);
     }
-    
+
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    [responseData setLength:0];
-    NSLog(@"Yay! Connection was made.");
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [responseData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
 {
     // Show error
 	NSLog(@"something very bad happened here: %@", error);
+
+    // hide loading modal
+	[loadingModal hide:YES];
 }
 
 @end

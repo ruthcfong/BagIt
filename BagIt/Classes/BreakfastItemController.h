@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
+#import "Order.h"
+#import "MBProgressHUD.h"
 
 @interface BreakfastItemController : UITableViewController 
 {
@@ -18,11 +20,13 @@
 	NSString *pickupConcat;
 	NSString *prevOrderInfo;
 	NSMutableString *orderInfo;
+    NSMutableString *foodsOrdered;
 	NSString *thisConcat;
     UserInformation* user;
     NSMutableData* data;
     NSString* dWork;
-    UIActivityIndicatorView* cLoadingView;
+    Order* order;
+    MBProgressHUD* loadingModal;
 }
 
 // declare setters/getters methods
@@ -31,15 +35,13 @@
 @property (nonatomic, retain) NSString *pickupConcat;
 @property (nonatomic, retain) NSString *prevOrderInfo;
 @property (nonatomic, retain) NSMutableString *orderInfo;
+@property (nonatomic, retain) NSMutableString *foodsOrdered;
 @property (nonatomic, retain) NSString *thisConcat;
 @property (nonatomic, retain) UserInformation* user;
 @property (retain, nonatomic) NSMutableData* data;
 @property (retain, nonatomic) NSString* dWork;
-@property (nonatomic, retain) UIActivityIndicatorView *cLoadingView;
-
-- (void)initSpinner;
-- (void)spinBegin;
-- (void)spinEnd;
+@property (nonatomic, retain) Order* order;
+@property (nonatomic, retain) MBProgressHUD* loadingModal;
 
 // method prototypes
 - (void) done;

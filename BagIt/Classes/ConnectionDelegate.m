@@ -14,9 +14,9 @@
 @implementation ConnectionDelegate
 
 @synthesize data=_data;
-@synthesize loginViewController=_loginViewController;
-
-@synthesize didWork, dWork;
+@synthesize viewController=_viewController;
+@synthesize nextViewController = _nextViewController;
+@synthesize  message, didWork, loadingModal;
 
 - (id)init
 {
@@ -30,38 +30,19 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection*)connection
-{
-    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    
+{    
     NSError* error = nil;
     NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
                                                                                    error:&error];
     if (!error) 
     {
         NSLog(@"%@", [responseData valueForKey:@"didWork"]);
-        // iterate over all returned data
-        //NSMutableArray* courses = [[NSMutableArray alloc] init];
-        //didWork = 
-        dWork = [responseData valueForKey:@"didWork"];
+
+        didWork = [responseData valueForKey:@"didWork"];
         
-        if ([dWork isEqualToString:@"yes"]) 
+        //if ([didWork isEqualToString:@"yes"]) 
         {
             NSLog(@"Yay!");
-            
-            // initialize the next view to select a meal
-			SelectionViewController *selectionViewController = 
-			[[SelectionViewController alloc] 
-			 initWithNibName:@"SelectionViewController" bundle:nil];
-			
-			// set the view controller's title
-			selectionViewController.title = @"Select a meal";
-			
-            // create popup alert
-            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"What Now?"
-                                                              message:@"Do you want to logout or place another order?"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"Order"
-                                                    otherButtonTitles:@"Logout", nil];
             
             // show alert
             [message show];
@@ -70,15 +51,15 @@
             [message release];
 
 			// display the view
-			//[loginViewController.navigationController pushViewController:selectionViewController 
-												// animated:YES];
+			[_viewController.navigationController pushViewController:_nextViewController 
+												animated:YES];
 
         }
-        else
+        /*else
         {
             // display error message
             [self showAlertWithString: @"Order couldn't be submitted. Please try again."];
-        }
+        }*/
         
     }
     else

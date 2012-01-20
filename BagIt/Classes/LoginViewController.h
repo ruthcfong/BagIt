@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
-@interface LoginViewController : UIViewController
+#import "MBProgressHUD.h"
+
+@interface LoginViewController : UIViewController <MBProgressHUDDelegate>
 {
     UITextField* username;
     UITextField* password;
@@ -17,8 +19,9 @@
     NSMutableData *responseData;
     NSString* didWork;
     UIActivityIndicatorView *cLoadingView;
+    MBProgressHUD *loadingModal;
 }
-
+@property (retain, nonatomic) MBProgressHUD* loadingModal;
 @property (retain, nonatomic) IBOutlet     UITextField* username;
 @property (retain, nonatomic) IBOutlet     UITextField* password;
 @property (retain, nonatomic) NSString* orderInfo;
@@ -27,9 +30,6 @@
 @property (retain, nonatomic) NSString* didWork;
 @property (nonatomic, retain) UIActivityIndicatorView *cLoadingView;
 
-- (void)initSpinner;
-- (void)spinBegin;
-- (void)spinEnd;
 -(IBAction)submit:(id)sender;
 - (IBAction) textFieldReturn: (id) sender;
 - (IBAction) backgroundTouched: (id) sender;

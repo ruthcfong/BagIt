@@ -13,10 +13,11 @@
 #import "CJSONDeserializer.h"
 #import "ConnectionDelegate.h"
 #import "NSObject+Addons.h"
+#import "Order.h"
 
 @implementation BreakfastItemController
 
-@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, cLoadingView;
+@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, order, foodsOrdered, loadingModal;
 
 @synthesize data = _data;
 
@@ -32,12 +33,27 @@
     return self;
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection*)connection
-{
-    // this is how we stop spinning
-    [NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
+#pragma mark -
+#pragma mark NSURLConnectionDelegete
 
-    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];    
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
+{
+    [self.data setLength:0];
+    NSLog(@"Yay! Connection was made.");
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
+{
+    // save received data
+    [self.data appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection 
+{
+        
+    // hide loading modal
+	[loadingModal hide:YES];
+    
     NSError* error = nil;
     NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
                                                                                      error:&error];
@@ -73,29 +89,18 @@
         NSLog(@"%@", error);
     }
     
-    [error release];
-    [str release];
+    [error release];    
     
 }
 
-
-- (void)connection:(NSURLConnection*)connection didReceiveData:(NSData *)data
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
 {
-    [self.data appendData:data];
+    // Show error
+	NSLog(@"something very bad happened here: %@", error);
+    
+    // hide loading modal
+	[loadingModal hide:YES];
 }
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    [self.data setLength:0];
-    NSLog(@"Yay! Connection was made.");
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    NSLog(@"Boo hoo. Something went terribly wrong.");
-    NSLog(@"The error is as follows:%@", error);
-}
-
 
 /* (void)
  * showSubmitAlert
@@ -166,13 +171,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
         self.data = [[NSMutableData alloc] init];
         
         NSURLConnection *myConnection = [NSURLConnection connectionWithRequest:request delegate:self];
-        
-        // this is how we start spinning
-        [NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
 
         [myConnection start];
         
-        //[NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
+        // show loading modal
+        loadingModal = [[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES] retain];
+        loadingModal.labelText = @"Loading";
         
     }
     
@@ -200,34 +204,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
      }*/
 	
 	return;
-}
-
-- (void)initSpinner {
-    /*cLoadingView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];    
-    [cLoadingView setBackgroundColor:[UIColor blackColor]];
-     // we put our spinning "thing" right in the center of the current view
-     CGPoint newCenter = (CGPoint) [self.view center];
-     cLoadingView.center = newCenter;
-     [self.view addSubview:cLoadingView];*/
-    
-    cLoadingView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-	cLoadingView.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
-	cLoadingView.center = self.view.center;
-	[self.view addSubview: cLoadingView];
-
-    
-    /*cLoadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView: cLoadingView];
-    self.navigationItem.rightBarButtonItem = activityButton;*/
-    
-}
-
-- (void)spinBegin {
-    [cLoadingView startAnimating];
-}
-
-- (void)spinEnd {
-    [cLoadingView stopAnimating];
 }
 
 /* (void)

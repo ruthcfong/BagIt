@@ -8,11 +8,12 @@
 
 #import "SelectionViewController.h"
 #import "PickupController.h"
+#import "Order.h"
 #import "Constants.h"
 
 @implementation SelectionViewController
 
-@synthesize meals, pickupController, user;
+@synthesize meals, pickupController, user, order;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -29,7 +30,7 @@
 	
 	// initialize and fill meal array with the different types of meals
 	self.meals = [[NSArray alloc] initWithObjects:
-				  @"Breakfast", @"Lunch", @"Dinner", nil];
+				  @"Breakfast", @"Lunch", @"Dinner", @"Favorites", nil];
 	
 	// set the title of the view
 	self.title = @"Select a Meal";
@@ -107,18 +108,26 @@
 		case DINNER:
 			pickupController.title = @"Dinner";
 			break;
+        case FAVORITES:
+            NSLog(@"Favorites selected.");
+            break;
 		default:
 			pickupController.title = @"Error";
 			break;
 	}
-    
-    NSLog(@"User: %@ Password: %@", user.huid, user.pin);
-    
+        
     // pass user information to pickup view
     pickupController.user = user;
-	    
-	// Pass the selected object to the new view controller.
-	[self.navigationController pushViewController:pickupController animated:YES];
+	
+    if (indexPath.row != FAVORITES) 
+    {
+        // instantiate object to represent the order and pass it to the pickup view
+        order = [[Order alloc] initWithMeal:indexPath.row];
+        pickupController.order = order;
+        
+        // Pass the selected object to the new view controller.
+        [self.navigationController pushViewController:pickupController animated:YES];
+    }
 	
 	// Release controller
 	[pickupController release];
@@ -141,6 +150,7 @@
 	self.meals = nil;
 	self.pickupController = nil;
     self.user = nil;
+    self.order = nil;
 }
 
 
@@ -148,6 +158,7 @@
 	[meals release];
 	[pickupController release];
     [user release];
+    [order release];
     [super dealloc];
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
+#import "Order.h"
 @class PickupController;
 
 @interface SelectionViewController : UITableViewController 
@@ -16,10 +17,13 @@
 	NSArray *meals;
 	PickupController *pickupController;
     UserInformation *user;
+    Order* order;
 }
 
 // getter/setter prototypes
 @property (nonatomic, retain) IBOutlet PickupController *pickupController;
 @property (nonatomic, retain) NSArray *meals;
 @property (nonatomic, retain) UserInformation* user;
+@property (nonatomic, retain) Order* order;
+
 @end

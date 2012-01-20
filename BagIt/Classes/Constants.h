@@ -12,6 +12,11 @@
 #define BREAKFAST 0
 #define LUNCH 1
 #define DINNER 2
+#define FAVORITES 3
+
+//For Order.m
+#define NUM_OF_PICKUP_OPTIONS 3
+#define NUM_OF_ENTREE_OPTIONS 4
 
 // For ConnectionDelegate.m
 #define LOGOUT "Logout"

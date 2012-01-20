@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
 #import "SubmissionSuperViewController.h"
+#import "Order.h"
+#import "MBProgressHUD.h"
+
 @interface SidesViewController : UIViewController <UIAlertViewDelegate> 
 {
 	// IBOutlets
@@ -24,10 +27,11 @@
 	NSMutableString *orderInfo;
     
     //UserInformation *user;
-    UIActivityIndicatorView *cLoadingView;    
-    
-    NSString* dWork;
+    NSString* didWork;
     UserInformation* user;
+    Order* order;
+    NSMutableString* foodsOrdered;
+    MBProgressHUD* loadingModal;
 
 }
 
@@ -41,8 +45,11 @@
 @property (nonatomic, retain) NSMutableString *prevOrderInfo;
 @property (nonatomic, retain) NSMutableString *orderInfo;
 @property (retain, nonatomic) NSMutableData* data;
-@property (retain, nonatomic) NSString* dWork;
+@property (retain, nonatomic) NSString* didWork;
 @property (retain, readwrite, nonatomic) UserInformation* user;
+@property (retain, nonatomic) Order* order;
+@property (retain, nonatomic) NSMutableString* foodsOrdered;
+@property (retain, nonatomic) MBProgressHUD* loadingModal;
 
 @property (nonatomic, retain) NSArray *drinks;
 @property (nonatomic, assign) NSInteger	selectedDrinkIndex;
@@ -51,12 +58,6 @@
 @property (nonatomic, retain) NSArray *snacks;
 @property (nonatomic, assign) NSInteger selectedSnack1Index;
 @property (nonatomic, assign) NSInteger selectedSnack2Index;
-
-@property (nonatomic, retain) UIActivityIndicatorView *cLoadingView;
-
-- (void)initSpinner;
-- (void)spinBegin;
-- (void)spinEnd;
 
 - (IBAction) submit;
 - (void) showSubmitAlert;

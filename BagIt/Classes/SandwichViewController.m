@@ -17,11 +17,13 @@
 #import "NSObject+Addons.h"
 #import "UserInformation.h"
 #import "PickupController.h"
+#import "Order.h"
+
 @implementation SandwichViewController
 
 // instance variables
 @synthesize itemLabel, optionalLabel, chefsNoteLabel, itemText, breadText, 
-cheeseText, dressingText, nextButton, 
+cheeseText, dressingText, nextButton, order, entreeOrdered, 
 isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 
 @synthesize selectedIndex = _selectedIndex;
@@ -61,15 +63,29 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	// check for an error
 	if (concat != nil) 
 	{
-		// prepare for the next part of the order
-		[orderInfo appendString:@"\n"];
+        // save entree ordered
+        entreeOrdered = [[NSMutableString alloc] initWithString:orderInfo];
+        
+        // prepare for the next part of the order
+        if ([orderInfo length] != 0) 
+        {
+            [orderInfo appendString:@"\n"];
+        }
 		[orderInfo insertString:prevOrderInfo atIndex:BEGINNING];
-		
+		        
+        // remember the foods and options ordered
+         NSMutableArray* selectedEntreeOptions = [[NSMutableArray alloc] initWithCapacity:4];
+    
+        [selectedEntreeOptions addObject:[[NSNumber alloc] initWithInt:self.selectedIndex]];
+        [selectedEntreeOptions addObject:[[NSNumber alloc] initWithInt:self.selectedBreadIndex]];
+        [selectedEntreeOptions addObject:[[NSNumber alloc] initWithInt:self.selectedCheeseIndex]];
+        [selectedEntreeOptions addObject:[[NSNumber alloc] initWithInt:self.selectedDressingIndex]];
+
 		// display screen for ordering second sandwich if this screen is
 		// for ordering the first entree
 		if (isFirstSandwich) 
-		{
-			// initialize second sandwich controller
+		{			
+            // initialize second sandwich controller
 			SandwichViewController *sandwichController2 = 
 			[[SandwichViewController alloc] 
 			 initWithNibName:@"SandwichViewController" bundle:nil];
@@ -92,9 +108,13 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			// remember whether a chef's salad was ordered
 			sandwichController2.selectedChefs = selectedChefs;
 			            
-            // pass user information to next sandwich's controller
+            // pass user and order information to next sandwich's controller
             sandwichController2.user = user;
-                        
+            order.selectedEntree1Indices = selectedEntreeOptions;
+            NSLog(@"Order: %@", entreeOrdered);
+            order.entree1Order = entreeOrdered; //[[NSMutableString alloc] initWithString:entreeOrdered];
+            sandwichController2.order = order;
+            
 			// display the next screen
 			[self.navigationController pushViewController:sandwichController2 
 												 animated:YES];
@@ -120,9 +140,12 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			// set the view controller's title
 			sidesViewController.title = @"Sides";
 			
-            // pass the user information to the side view
+            // pass user & order information to the side view & remember the order 
             sidesViewController.user = user;
-                        
+            order.selectedEntree2Indices = selectedEntreeOptions;
+            order.entree2Order = entreeOrdered;
+            sidesViewController.order = order;
+            
 			// display the view
 			[self.navigationController pushViewController:sidesViewController 
 												 animated:YES];
@@ -693,10 +716,22 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
     // e.g. self.myOutlet = nil;
 	
 	// Release allocated memory
+    self.itemLabel = nil;
+    self.optionalLabel = nil;
+    self.chefsNoteLabel = nil;
+    self.itemText = nil;
+    self.breadText = nil;
+    self.cheeseText = nil;
+    self.dressingText = nil;
+    self.nextButton = nil;
+    self.entreeOrdered = nil;
+    self.orderInfo = nil;
 	self.itemNames = nil;
 	self.breads = nil;
 	self.cheeses = nil;
 	self.dressings = nil;
+    self.dataArray = nil;
+    self.itemNames = nil;
     //self.user = nil;
 }
 
@@ -708,6 +743,23 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	[self.breads release];
 	[self.cheeses release];
 	[self.dressings release];
+    [self.itemLabel release];
+    [self.optionalLabel release];
+    [self.chefsNoteLabel release];
+    [self.itemText release];
+    [self.breadText release];
+    [self.cheeseText release];
+    [self.dressingText release];
+    [self.nextButton release];
+    [self.entreeOrdered release];
+    [self.orderInfo release];
+	[self.itemNames release];
+	[self.breads release];
+	[self.cheeses release];
+	[self.dressings release];
+    [self.dataArray release];
+    [self.itemNames release];
+
     //[self.user release];
     [super dealloc];
 }

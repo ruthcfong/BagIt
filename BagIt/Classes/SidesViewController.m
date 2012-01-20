@@ -19,11 +19,12 @@
 #import "NSObject+Addons.h"
 #import "SelectionViewController.h"
 #import "SandwichViewController.h"
+
 @implementation SidesViewController
 
 // synthesize instance variables
 @synthesize drinkText, fruitText, snack1Text, snack2Text, previousConcat, 
-thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
+thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal, order;
 
 // synthesize private variables
 @synthesize drinks = _drinks;
@@ -46,13 +47,25 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
     return self;
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection*)connection
-{
-    // this is how we stop spinning
-    [NSThread detachNewThreadSelector: @selector(spinEnd) toTarget:self withObject:nil];
+#pragma mark -
+#pragma mark NSURLConnectionDelegete
 
-    NSString* str = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", str);
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
+{
+    [self.data setLength:0];
+    NSLog(@"Yay! Connection was made.");
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
+{
+    // save received data
+    [self.data appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection 
+{
+    // hide loading modal
+	[loadingModal hide:YES];
     
     NSError* error = nil;
     NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
@@ -60,12 +73,9 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
     if (!error) 
     {
         NSLog(@"%@", [responseData valueForKey:@"didWork"]);
-        // iterate over all returned data
-        //NSMutableArray* courses = [[NSMutableArray alloc] init];
-        //didWork = 
-        dWork = [responseData valueForKey:@"didWork"];
+        didWork = [responseData valueForKey:@"didWork"];
         
-        if ([dWork isEqualToString:@"yes"]) 
+        if ([didWork isEqualToString:@"yes"]) 
         {
             NSLog(@"Yay!");
 			
@@ -98,27 +108,18 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
         NSLog(@"%@", error);
     }
     
+    [error release];
+    
 }
 
-
-- (void)connection:(NSURLConnection*)connection didReceiveData:(NSData *)data
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
 {
-    [self.data appendData:data];
+    // Show error
+	NSLog(@"something very bad happened here: %@", error);
+    
+    // hide loading modal
+	[loadingModal hide:YES];
 }
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    [self.data setLength:0];
-    NSLog(@"Yay! Connection was made.");
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    NSLog(@"Boo hoo. Something went terribly wrong.");
-    NSLog(@"The error is as follows:%@", error);
-}
-
-
 
 
 /* (IBAction)
@@ -200,10 +201,14 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 				 [NSString urlEncodeValue:[[arrOfSides objectAtIndex:indexOfSide] 
 											objectAtIndex:selectedIndex]]];
 				
-				// add side's name to order information string
+				// add side's name to order information & foodsOrdered strings
 				[orderInfo appendFormat:@"%@\n", 
 				 [[arrOfSides objectAtIndex:indexOfSide] 
 				  objectAtIndex:selectedIndex]];
+                [foodsOrdered appendFormat:@"%@\n", 
+				 [[arrOfSides objectAtIndex:indexOfSide] 
+				  objectAtIndex:selectedIndex]];
+
 				
 				break;
 		}
@@ -227,6 +232,8 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
  */
 - (void) showSubmitAlert
 {
+    // remember the sides ordered
+    order.sideOrder = [[NSMutableString alloc] initWithString:orderInfo];
 	// synthesize order information to display in popup message
 	[orderInfo insertString:prevOrderInfo atIndex:BEGINNING];
 	
@@ -261,7 +268,24 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 	// check if "Submit" button was clicked
     if([title isEqualToString:@"Submit"])
     {
+        
+        // remember the foods and options ordered
+        NSMutableArray* selectedSideOptions = [[NSMutableArray alloc] initWithCapacity:4];
+        
+        [selectedSideOptions addObject:[[NSNumber alloc] initWithInt:self.selectedDrinkIndex]];
+        [selectedSideOptions addObject:[[NSNumber alloc] initWithInt:self.selectedFruitIndex]];
+        [selectedSideOptions addObject:[[NSNumber alloc] initWithInt:self.selectedSnack1Index]];
+        [selectedSideOptions addObject:[[NSNumber alloc] initWithInt:self.selectedSnack2Index]];
+        
+        order.selectedSideIndices = selectedSideOptions;
+        
         NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",previousConcat, thisConcat];
+        
+        // remember the custom URL & human-readable string that represent the order
+        order.orderURL = getURL;
+        order.orderInformation = orderInfo;
+        
+        NSLog(@"%@", order.orderInformation);
         
         // remember the url
         NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
@@ -290,11 +314,9 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
         
         [myConnection start];
         
-        // this is how we start spinning
-        [NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
-
-        //[NSThread detachNewThreadSelector: @selector(spinBegin) toTarget:self withObject:nil];
-
+        // show loading modal
+        loadingModal = [[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES] retain];
+        loadingModal.labelText = @"Loading";
     }
     
     // check if the logout button was clicked
@@ -367,7 +389,6 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
 
 - (void)viewDidLoad 
 {
-    [self initSpinner];
     [super viewDidLoad];
 	
 	// remember types of drinks, fruits, and snacks
@@ -555,27 +576,6 @@ thisConcat, prevOrderInfo, orderInfo, user, dWork, cLoadingView;
     if ([element respondsToSelector:@selector(setText:)]) {
         [element setText:[self.snacks objectAtIndex:self.selectedSnack2Index]];
     }
-}
-
-- (void)initSpinner {
-    /*cLoadingView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];    
-     // we put our spinning "thing" right in the center of the current view
-     CGPoint newCenter = (CGPoint) [self.view center];
-     cLoadingView.center = newCenter;
-     [self.view addSubview:cLoadingView];*/
-    
-    cLoadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView: cLoadingView];
-    self.navigationItem.rightBarButtonItem = activityButton;
-    
-}
-
-- (void)spinBegin {
-    [cLoadingView startAnimating];
-}
-
-- (void)spinEnd {
-    [cLoadingView stopAnimating];
 }
 
 /*
