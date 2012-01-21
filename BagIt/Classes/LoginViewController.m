@@ -251,9 +251,6 @@
     // clear username & password fields everytime the view is loaded
     username.text = @"";
     password.text= @"";
-    
-    // automatically loads the number pad
-    [username becomeFirstResponder];
 }
 
 - (void)viewDidLoad
@@ -263,6 +260,9 @@
     // Do any additional setup after loading the view from its nib.
     password.secureTextEntry = YES;
     self.title = @"BagIt";
+    
+    // automatically loads the number pad
+    [username becomeFirstResponder];
 }
 
 - (void)viewDidUnload

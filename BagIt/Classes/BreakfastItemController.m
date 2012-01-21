@@ -23,7 +23,8 @@
 {
     self = [super init];
     
-    if (self) {
+    if (self) 
+    {
         responseData = [[NSMutableData alloc] init];
     }
     
@@ -52,10 +53,10 @@
 	[loadingModal hide:YES];
     
     NSError* error = nil;
-    [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
+    NSMutableDictionary* responseDictionary = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
     if (!error) 
     {
-        dWork = [responseData valueForKey:@"didWork"];
+        dWork = [responseDictionary valueForKey:@"didWork"];
         
         if ([dWork isEqualToString:@"yes"]) 
         {			            
@@ -142,6 +143,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     if([title isEqualToString:@"Submit"])
     {		
         NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",  pickupConcat, thisConcat];
+        
+        NSLog(@"%@", getURL);
         
         // remember the url
         NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
