@@ -111,7 +111,6 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
             // pass user and order information to next sandwich's controller
             sandwichController2.user = user;
             order.selectedEntree1Indices = selectedEntreeOptions;
-            NSLog(@"Order: %@", entreeOrdered);
             order.entree1Order = entreeOrdered; //[[NSMutableString alloc] initWithString:entreeOrdered];
             sandwichController2.order = order;
             

@@ -313,7 +313,6 @@
     {
         didWork = [responseDictionary valueForKey:@"didWork"];
         
-        NSLog(@"%@", didWork);
         if ([didWork isEqualToString:@"yes"]) 
         {
             NSLog(@"Yay!");

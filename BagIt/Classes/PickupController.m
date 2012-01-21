@@ -81,7 +81,6 @@
         NSDate* fourAM = [NSDate dateWithNaturalLanguageString:@"today at 4am"];
         NSDate* today = [NSDate date];
         int startDate = ([today compare:fourAM] == NSOrderedAscending) ? 0 : 1;
-        NSLog(@"%i", startDate);
         
 		// create a NSDate object that's i days after tomorrow
 		// and add to an array of NSDate objects

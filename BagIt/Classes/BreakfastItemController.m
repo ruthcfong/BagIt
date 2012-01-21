@@ -55,7 +55,6 @@
     [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
     if (!error) 
     {
-        NSLog(@"%@", [responseData valueForKey:@"didWork"]);
         dWork = [responseData valueForKey:@"didWork"];
         
         if ([dWork isEqualToString:@"yes"]) 
@@ -294,7 +293,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	// load our data from a plist file inside our app bundle
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"Breakfast" ofType:@"plist"];
-	dataArray = [NSMutableArray arrayWithContentsOfFile:path];
+	dataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
     
 	// initialize a "Submit" button
 	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit"

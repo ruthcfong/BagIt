@@ -36,8 +36,6 @@
                                                                                    error:&error];
     if (!error) 
     {
-        NSLog(@"%@", [responseData valueForKey:@"didWork"]);
-
         didWork = [responseData valueForKey:@"didWork"];
         
         //if ([didWork isEqualToString:@"yes"]) 

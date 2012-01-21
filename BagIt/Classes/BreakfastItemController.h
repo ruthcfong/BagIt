@@ -11,7 +11,7 @@
 #import "Order.h"
 #import "MBProgressHUD.h"
 
-@interface BreakfastItemController : UITableViewController 
+@interface BreakfastItemController : UITableViewController <UITableViewDelegate>
 {
 	
 	// declare instance variables

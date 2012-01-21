@@ -281,13 +281,13 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
         
         NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",previousConcat, thisConcat];
         
-        NSLog(@"%@", getURL);
+       // NSLog(@"%@", getURL);
         
         // remember the custom URL & human-readable string that represent the order
         order.orderURL = getURL;
         order.orderInformation = orderInfo;
         
-        NSLog(@"%@", order.orderInformation);
+        //NSLog(@"%@", order.orderInformation);
         
         // remember the url
         NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
