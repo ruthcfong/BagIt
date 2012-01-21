@@ -216,6 +216,7 @@
     // pass to the connection delegate
     d.nextViewController = selectionViewController;
     d.message = message;*/
+    
     // setup connection and start the connection
     NSURLConnection *myConnection = [NSURLConnection connectionWithRequest:request delegate:self];
 

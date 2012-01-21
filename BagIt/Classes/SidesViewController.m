@@ -281,6 +281,8 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
         
         NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",previousConcat, thisConcat];
         
+        NSLog(@"%@", getURL);
+        
         // remember the custom URL & human-readable string that represent the order
         order.orderURL = getURL;
         order.orderInformation = orderInfo;
@@ -327,7 +329,7 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
         
         
         // Go back to the root controller
-        [self.navigationController popToRootViewControllerAnimated:NO];
+        [self.navigationController popToRootViewControllerAnimated:YES];
 
     }
              

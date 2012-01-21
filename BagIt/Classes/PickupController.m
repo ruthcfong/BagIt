@@ -73,7 +73,7 @@
 	// initialize arrays of keys and objects of dates to display
 	self.dateKeys = [[NSMutableArray alloc] initWithCapacity:DAYS_IN_WEEK];
     self.dateObjects = [[NSMutableArray alloc] initWithCapacity:DAYS_IN_WEEK];
-	
+    
 	// fill keys and object arrays with 7 days starting with tomorrow
 	for (int i = 0; i < DAYS_IN_WEEK; i++) 
 	{
@@ -149,7 +149,9 @@
     [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedIndex]];
     [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedDateIndex]];
     [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedTimeIndex]];
-    order.selectedPickupOptions = selectedPickupOptions;
+    order.selectedPickupOptions = [[NSMutableArray alloc] initWithArray: selectedPickupOptions];
+    
+    [selectedPickupOptions release];
     
 	// display either the breakfast item or sandwich item view,
 	// depending on meal

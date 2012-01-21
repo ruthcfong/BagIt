@@ -93,11 +93,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/SidesViewController.m"
-         timestampString = "348781274.316381"
+         timestampString = "348811058.470557"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "345"
-         endingLineNumber = "345"
+         startingLineNumber = "347"
+         endingLineNumber = "347"
          landmarkName = "-alertView:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -142,6 +142,34 @@
          endingLineNumber = "48"
          landmarkName = "@implementation LoginViewController"
          landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Classes/PickupController.m"
+         timestampString = "348810450.469962"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "129"
+         endingLineNumber = "129"
+         landmarkName = "-next:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Classes/BreakfastItemController.m"
+         timestampString = "348811982.645234"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "368"
+         endingLineNumber = "368"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

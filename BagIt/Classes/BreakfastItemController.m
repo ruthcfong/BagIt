@@ -52,8 +52,7 @@
 	[loadingModal hide:YES];
     
     NSError* error = nil;
-    [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData 
-                                                                                     error:&error];
+    [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
     if (!error) 
     {
         NSLog(@"%@", [responseData valueForKey:@"didWork"]);
@@ -94,6 +93,7 @@
 {
     // Show error
 	NSLog(@"something very bad happened here: %@", error);
+    [self showAlertWithString:@"Unable to submit your order. Check your connection."];
     
     // hide loading modal
 	[loadingModal hide:YES];
@@ -295,7 +295,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 	// load our data from a plist file inside our app bundle
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"Breakfast" ofType:@"plist"];
 	dataArray = [NSMutableArray arrayWithContentsOfFile:path];
-	
+    
 	// initialize a "Submit" button
 	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit"
 																	  style:UIBarButtonItemStylePlain target:self action:@selector(done)];          
