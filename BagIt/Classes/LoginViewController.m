@@ -18,16 +18,141 @@
 
 @synthesize username, password, user, orderInfo, responseData, didWork, cLoadingView, loadingModal;
 
+/*- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (textField.keyboardType == UIKeyboardTypeNumberPad) 
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self 
+                                                 selector:@selector(keyboardWillShow:) 
+                                                     name:UIKeyboardWillShowNotification 
+                                                   object:nil];
+    }
+    
+    return true;
+}*/
+
+/*- (void) keyboardWillShow:(NSNotification *)note 
+{  
+    // create custom button
+    UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    doneButton.frame = CGRectMake(0, 163, 106, 53);
+    doneButton.adjustsImageWhenHighlighted = NO;
+    [doneButton setImage:[UIImage imageNamed:@"DoneUp.png"] forState:UIControlStateNormal];
+    [doneButton setImage:[UIImage imageNamed:@"DoneDown.png"] forState:UIControlStateHighlighted];
+    [doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // locate keyboard view
+    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
+    UIView* keyboard;
+    for(int i=0; i<[tempWindow.subviews count]; i++) 
+    {
+        keyboard = [tempWindow.subviews objectAtIndex:i];
+        // keyboard view found; add the custom button to it
+        if([[keyboard description] hasPrefix:@"UIKeyboard"] == YES)
+            [keyboard addSubview:doneButton];
+    }
+}*/
+
+
+/*- (void)loadView 
+{
+    //self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    //self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    username = [[UITextField alloc] initWithFrame:CGRectMake(10, 200, 300, 26)];
+    //username.borderStyle = UITextBorderStyleRoundedRect;
+    //username.keyboardType = UIKeyboardTypeNumberPad;
+    username.returnKeyType = UIReturnKeyDone;
+    //username.textAlignment = UITextAlignmentLeft;
+    //username.text = @"12345";
+    [self.view addSubview:username];
+    
+	// add observer for the respective notifications (depending on the os version)
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) 
+    {
+		[[NSNotificationCenter defaultCenter] addObserver:self 
+												 selector:@selector(keyboardDidShow:) 
+													 name:UIKeyboardDidShowNotification 
+												   object:nil];		
+	} else 
+    {
+		[[NSNotificationCenter defaultCenter] addObserver:self 
+												 selector:@selector(keyboardWillShow:) 
+													 name:UIKeyboardWillShowNotification 
+												   object:nil];
+	}
+	
+}
+
+- (void)addButtonToKeyboard 
+{
+	// create custom button
+	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	doneButton.frame = CGRectMake(0, 163, 106, 53);
+	doneButton.adjustsImageWhenHighlighted = NO;
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.0) {
+		[doneButton setImage:[UIImage imageNamed:@"DoneUp3.png"] forState:UIControlStateNormal];
+		[doneButton setImage:[UIImage imageNamed:@"DoneDown3.png"] forState:UIControlStateHighlighted];
+	} else {        
+		[doneButton setImage:[UIImage imageNamed:@"DoneUp.png"] forState:UIControlStateNormal];
+		[doneButton setImage:[UIImage imageNamed:@"DoneDown.png"] forState:UIControlStateHighlighted];
+	}
+	[doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+	// locate keyboard view
+	UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
+	UIView* keyboard;
+	for(int i=0; i<[tempWindow.subviews count]; i++) {
+		keyboard = [tempWindow.subviews objectAtIndex:i];
+		// keyboard found, add the button
+		if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
+			if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
+				[keyboard addSubview:doneButton];
+		} else {
+			if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
+				[keyboard addSubview:doneButton];
+		}
+	}
+}
+
+- (void)keyboardWillShow:(NSNotification *)note 
+{
+	// if clause is just an additional precaution, you could also dismiss it
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] < 3.2) 
+    {
+		[self addButtonToKeyboard];
+	}
+}
+
+- (void)keyboardDidShow:(NSNotification *)note 
+{
+	// if clause is just an additional precaution, you could also dismiss it
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) 
+    {
+		[self addButtonToKeyboard];
+    }
+}
+
+
+- (void)doneButton:(id)sender 
+{
+	//NSLog(@"doneButton");
+    //NSLog(@"Input: %@", textField.text);
+    [username resignFirstResponder];
+}
+
+*/
 - (IBAction) textFieldReturn: (id) sender
 {
 	// quit keyboard (i.e. first responder)
 	[sender resignFirstResponder];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (IBAction) backgroundTouched: (id) sender
 {
     [username resignFirstResponder];
     [password resignFirstResponder];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(IBAction)submit:(id)sender
@@ -48,7 +173,7 @@
     NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
     
     // setup the request
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
 
     // remember the user's id and pin
     user = [[UserInformation alloc] initWithHUID:username.text andPIN:password.text];
@@ -125,6 +250,9 @@
     // clear username & password fields everytime the view is loaded
     username.text = @"";
     password.text= @"";
+    
+    // automatically loads the number pad
+    [username becomeFirstResponder];
 }
 
 - (void)viewDidLoad
@@ -133,7 +261,7 @@
 
     // Do any additional setup after loading the view from its nib.
     password.secureTextEntry = YES;
-    self.title = @"Login";
+    self.title = @"BagIt";
 }
 
 - (void)viewDidUnload
@@ -185,7 +313,7 @@
         didWork = [responseDictionary valueForKey:@"didWork"];
         
         NSLog(@"%@", didWork);
-        //if ([didWork isEqualToString:@"yes"]) 
+        if ([didWork isEqualToString:@"yes"]) 
         {
             NSLog(@"Yay!");
             
@@ -205,11 +333,11 @@
                                                  animated:YES];
             
         }
-        /*else
+        else
         {   
             // display error message
             [self showAlertWithString: @"Invalid HUID and/or PIN."];
-        }*/
+        }
     }
     else
     {
@@ -220,9 +348,10 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
 {
-    // Show error
-	NSLog(@"something very bad happened here: %@", error);
+    // display error message
+    [self showAlertWithString: @"Could not login. Check you're connection."];
 
+    
     // hide loading modal
 	[loadingModal hide:YES];
 }

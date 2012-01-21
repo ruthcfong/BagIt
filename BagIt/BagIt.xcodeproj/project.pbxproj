@@ -18,13 +18,16 @@
 		9B0A5D2F14C4DBA300B07FBB /* UIViewController+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A5D2E14C4DBA300B07FBB /* UIViewController+Addons.m */; };
 		9B0A5D3214C4DDB100B07FBB /* NSObject+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A5D3114C4DDB100B07FBB /* NSObject+Addons.m */; };
 		9B356E9F14C9DBAE002911A7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B356E9E14C9DBAE002911A7 /* MBProgressHUD.m */; };
+		9B356EB314CA2204002911A7 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B356EB114CA2204002911A7 /* DoneUp.png */; };
+		9B356EB414CA2204002911A7 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B356EB214CA2204002911A7 /* DoneDown.png */; };
+		9B356EBB14CA2AC7002911A7 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B356EB914CA2AC7002911A7 /* DoneDown3.png */; };
+		9B356EBC14CA2AC7002911A7 /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B356EBA14CA2AC7002911A7 /* DoneUp3.png */; };
 		9B65828714C3AE00001DB11F /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65828614C3AE00001DB11F /* UserInformation.m */; };
 		9B65828D14C3AF89001DB11F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65828B14C3AF89001DB11F /* LoginViewController.m */; };
 		9B65828E14C3AF89001DB11F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B65828C14C3AF89001DB11F /* LoginViewController.xib */; };
 		9B65829114C3AFBC001DB11F /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65829014C3AFBC001DB11F /* ConnectionDelegate.m */; };
 		9B65829614C3E48E001DB11F /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65829414C3E48E001DB11F /* SelectionViewController.m */; };
 		9B65829714C3E48E001DB11F /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B65829514C3E48E001DB11F /* SelectionViewController.xib */; };
-		9B68B10A14C608AE0024364B /* SubmissionSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B68B10914C608AE0024364B /* SubmissionSuperViewController.m */; };
 		9B86FECB14C88C1900831870 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B86FEC914C88C1900831870 /* Order.m */; };
 		9B8A5DC7148F3E6A0033996D /* PickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC5148F3E6A0033996D /* PickupController.m */; };
 		9B8A5DC8148F3E6A0033996D /* PickupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC6148F3E6A0033996D /* PickupController.xib */; };
@@ -75,6 +78,10 @@
 		9B0A5D3114C4DDB100B07FBB /* NSObject+Addons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addons.m"; sourceTree = "<group>"; };
 		9B356E9D14C9DBAE002911A7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9B356E9E14C9DBAE002911A7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9B356EB114CA2204002911A7 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
+		9B356EB214CA2204002911A7 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
+		9B356EB914CA2AC7002911A7 /* DoneDown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown3.png; sourceTree = "<group>"; };
+		9B356EBA14CA2AC7002911A7 /* DoneUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3.png; sourceTree = "<group>"; };
 		9B65828514C3AE00001DB11F /* UserInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInformation.h; sourceTree = "<group>"; };
 		9B65828614C3AE00001DB11F /* UserInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInformation.m; sourceTree = "<group>"; };
 		9B65828A14C3AF89001DB11F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -85,8 +92,6 @@
 		9B65829314C3E48E001DB11F /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
 		9B65829414C3E48E001DB11F /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		9B65829514C3E48E001DB11F /* SelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionViewController.xib; sourceTree = "<group>"; };
-		9B68B10814C608AE0024364B /* SubmissionSuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionSuperViewController.h; sourceTree = "<group>"; };
-		9B68B10914C608AE0024364B /* SubmissionSuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionSuperViewController.m; sourceTree = "<group>"; };
 		9B86FEC914C88C1900831870 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		9B86FECA14C88C1900831870 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		9B8A5DBC148F3E140033996D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -157,7 +162,6 @@
 			children = (
 				9B356E9C14C9DB81002911A7 /* Progress Modal */,
 				9B6221C614C88728005F3D47 /* OrderInformation */,
-				9B68B10714C608720024364B /* Submission Superclass */,
 				9B0A5D2C14C4DB6500B07FBB /* New Group */,
 				9BF2CB0D14C4CCD7000E5BAD /* CJSONDeserializer */,
 				9B65829214C3E471001DB11F /* Selection */,
@@ -211,6 +215,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9B356EB914CA2AC7002911A7 /* DoneDown3.png */,
+				9B356EBA14CA2AC7002911A7 /* DoneUp3.png */,
+				9B356EB114CA2204002911A7 /* DoneUp.png */,
+				9B356EB214CA2204002911A7 /* DoneDown.png */,
 				9B65828C14C3AF89001DB11F /* LoginViewController.xib */,
 				9B8A5E2D148F42030033996D /* checked.png */,
 				9B8A5E2E148F42030033996D /* unchecked.png */,
@@ -294,15 +302,6 @@
 				9B65829514C3E48E001DB11F /* SelectionViewController.xib */,
 			);
 			name = Selection;
-			sourceTree = "<group>";
-		};
-		9B68B10714C608720024364B /* Submission Superclass */ = {
-			isa = PBXGroup;
-			children = (
-				9B68B10814C608AE0024364B /* SubmissionSuperViewController.h */,
-				9B68B10914C608AE0024364B /* SubmissionSuperViewController.m */,
-			);
-			name = "Submission Superclass";
 			sourceTree = "<group>";
 		};
 		9B8A5DBB148F3E000033996D /* Constants */ = {
@@ -469,6 +468,10 @@
 				9B8A5E30148F42030033996D /* unchecked.png in Resources */,
 				9B65828E14C3AF89001DB11F /* LoginViewController.xib in Resources */,
 				9B65829714C3E48E001DB11F /* SelectionViewController.xib in Resources */,
+				9B356EB314CA2204002911A7 /* DoneUp.png in Resources */,
+				9B356EB414CA2204002911A7 /* DoneDown.png in Resources */,
+				9B356EBB14CA2AC7002911A7 /* DoneDown3.png in Resources */,
+				9B356EBC14CA2AC7002911A7 /* DoneUp3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +510,6 @@
 				9BF2CB2B14C4D16A000E5BAD /* CDataScanner_Extensions.m in Sources */,
 				9B0A5D2F14C4DBA300B07FBB /* UIViewController+Addons.m in Sources */,
 				9B0A5D3214C4DDB100B07FBB /* NSObject+Addons.m in Sources */,
-				9B68B10A14C608AE0024364B /* SubmissionSuperViewController.m in Sources */,
 				9B86FECB14C88C1900831870 /* Order.m in Sources */,
 				9B356E9F14C9DBAE002911A7 /* MBProgressHUD.m in Sources */,
 			);

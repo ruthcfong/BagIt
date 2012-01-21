@@ -48,7 +48,6 @@
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -75,6 +74,11 @@
 					<bool key="IBUIClipsSubviews">YES</bool>
 					<bool key="IBUIMultipleTouchEnabled">YES</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					<int key="IBUIBarStyle">2</int>
+					<object class="NSColor" key="IBUITintColor">
+						<int key="NSColorSpace">1</int>
+						<bytes key="NSRGB">MC42MTczNDY5Mzg4IDAuMDU2MDc4NjA1MDMgMC4wNjI3Nzc5MDMzNQA</bytes>
+					</object>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -173,6 +177,7 @@
 						<int key="objectID">11</int>
 						<reference key="object" ref="207850653"/>
 						<reference key="parent" ref="701001926"/>
+						<string key="objectName">Navigation Bar</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>

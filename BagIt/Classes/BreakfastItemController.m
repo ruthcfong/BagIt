@@ -17,17 +17,14 @@
 
 @implementation BreakfastItemController
 
-@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, order, foodsOrdered, loadingModal;
-
-@synthesize data = _data;
-
+@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, order, foodsOrdered, loadingModal, responseData;
 
 - (id)init
 {
     self = [super init];
     
     if (self) {
-        self.data = [[NSMutableData alloc] init];
+        responseData = [[NSMutableData alloc] init];
     }
     
     return self;
@@ -38,14 +35,14 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
 {
-    [self.data setLength:0];
+    [responseData setLength:0];
     NSLog(@"Yay! Connection was made.");
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
 {
     // save received data
-    [self.data appendData:data];
+    [responseData appendData:data];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection 
@@ -55,7 +52,7 @@
 	[loadingModal hide:YES];
     
     NSError* error = nil;
-    NSDictionary* responseData = [[CJSONDeserializer deserializer] deserializeAsDictionary:self.data 
+    [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData 
                                                                                      error:&error];
     if (!error) 
     {
@@ -168,7 +165,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
         // setup connection and start the connection
         
         // initialize a data object to save HTTP response body
-        self.data = [[NSMutableData alloc] init];
+        responseData = [[NSMutableData alloc] init];
         
         NSURLConnection *myConnection = [NSURLConnection connectionWithRequest:request delegate:self];
 
@@ -184,7 +181,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     else if([title isEqualToString:@"Logout"])
     {
         // delete user information
-        [user release];
+        [user release]; 
         
         // Go back to the root controller
         [self.navigationController popToRootViewControllerAnimated:NO];
@@ -297,7 +294,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	// load our data from a plist file inside our app bundle
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"Breakfast" ofType:@"plist"];
-	self.dataArray = [NSMutableArray arrayWithContentsOfFile:path];
+	dataArray = [NSMutableArray arrayWithContentsOfFile:path];
 	
 	// initialize a "Submit" button
 	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit"
@@ -334,17 +331,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 //
 - (void)viewDidUnload
 {
-	self.dataArray = nil;
-    self.data = nil;
+	dataArray = nil;
+    responseData = nil;
     self.thisConcat = nil;
 }
 
 
 - (void)dealloc
 {	
+    [responseData release];
     [dataArray release];
     [thisConcat release];
-    //[self.data release];
+    //[responseData release];
     
 	[super dealloc];
 }

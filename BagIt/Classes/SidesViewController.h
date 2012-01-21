@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
-#import "SubmissionSuperViewController.h"
 #import "Order.h"
 #import "MBProgressHUD.h"
 

@@ -10,7 +10,7 @@
 #import "UserInformation.h"
 #import "MBProgressHUD.h"
 
-@interface LoginViewController : UIViewController <MBProgressHUDDelegate>
+@interface LoginViewController : UIViewController <MBProgressHUDDelegate, UITextFieldDelegate>
 {
     UITextField* username;
     UITextField* password;
@@ -30,7 +30,8 @@
 @property (retain, nonatomic) NSString* didWork;
 @property (nonatomic, retain) UIActivityIndicatorView *cLoadingView;
 
--(IBAction)submit:(id)sender;
+//- (void) keyboardWillShow:(NSNotification *)note;
+- (IBAction) submit:(id)sender;
 - (IBAction) textFieldReturn: (id) sender;
 - (IBAction) backgroundTouched: (id) sender;
 

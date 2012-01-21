@@ -23,7 +23,7 @@
     NSMutableString *foodsOrdered;
 	NSString *thisConcat;
     UserInformation* user;
-    NSMutableData* data;
+    NSMutableData* responseData;
     NSString* dWork;
     Order* order;
     MBProgressHUD* loadingModal;
@@ -38,7 +38,7 @@
 @property (nonatomic, retain) NSMutableString *foodsOrdered;
 @property (nonatomic, retain) NSString *thisConcat;
 @property (nonatomic, retain) UserInformation* user;
-@property (retain, nonatomic) NSMutableData* data;
+@property (retain, nonatomic) NSMutableData* responseData;
 @property (retain, nonatomic) NSString* dWork;
 @property (nonatomic, retain) Order* order;
 @property (nonatomic, retain) MBProgressHUD* loadingModal;

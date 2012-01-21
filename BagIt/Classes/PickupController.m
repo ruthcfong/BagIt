@@ -18,7 +18,7 @@
 
 // instance variables
 @synthesize pickupInfo, locationText, dateText, timeText,
-	breakfastItemController, sandwichController, user, order, foodsOrdered;
+	breakfastItemController, sandwichController, user, order;
 
 @synthesize locations = _locations;
 @synthesize times = _times;
@@ -118,7 +118,6 @@
 	self.dateObjects = nil;
 	self.displayTimes = nil;
     self.actionSheetPicker = nil;
-    self.foodsOrdered = nil;
 	//self.user = nil;
     
     [super viewDidUnload];
@@ -151,7 +150,6 @@
     [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedDateIndex]];
     [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedTimeIndex]];
     order.selectedPickupOptions = selectedPickupOptions;
-    foodsOrdered = [[NSMutableString alloc] initWithString:@""];
     
 	// display either the breakfast item or sandwich item view,
 	// depending on meal
@@ -181,7 +179,6 @@
             // pass user and order information to breakfast view
             breakfastItemController.user = user;
             breakfastItemController.order = order;
-            breakfastItemController.foodsOrdered = foodsOrdered;
             
             // display the view
 			[self.navigationController pushViewController:breakfastItemController 
@@ -361,12 +358,12 @@
 // Release allocated memory
 - (void)dealloc 
 {
+    [self.pickupInfo release];
     [self.locations release];
 	[self.dateKeys release];
 	[self.dateObjects release];
 	[self.displayTimes release];
     [self.actionSheetPicker release];
-    [self.foodsOrdered release];
     //[self.user release];
     [super dealloc];
 }
