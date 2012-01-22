@@ -530,6 +530,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BagIt_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BagIt-Info.plist";
 				PRODUCT_NAME = BagIt;
 				VALIDATE_PRODUCT = NO;
@@ -543,6 +544,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BagIt_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BagIt-Info.plist";
 				PRODUCT_NAME = BagIt;
 				VALIDATE_PRODUCT = YES;
