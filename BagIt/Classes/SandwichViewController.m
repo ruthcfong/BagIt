@@ -732,32 +732,4 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 }
 
 
-- (void)dealloc 
-{
-	// Release allocated memory
-	self.itemNames;
-	self.breads;
-	self.cheeses;
-	self.dressings;
-    self.itemLabel;
-    self.optionalLabel;
-    self.chefsNoteLabel;
-    self.itemText;
-    self.breadText;
-    self.cheeseText;
-    self.dressingText;
-    self.nextButton;
-    self.entreeOrdered;
-    self.orderInfo;
-	self.itemNames;
-	self.breads;
-	self.cheeses;
-	self.dressings;
-    self.dataArray;
-    self.itemNames;
-
-    //[self.user release];
-}
-
-
 @end

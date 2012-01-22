@@ -363,18 +363,6 @@
     return YES;
 }
 
-// Release allocated memory
-- (void)dealloc 
-{
-    self.pickupInfo;
-    self.locations;
-	self.dateKeys;
-	self.dateObjects;
-	self.displayTimes;
-    self.actionSheetPicker;
-    //[self.user release];
-}
-
 #pragma - ActionSheetPickerDelegate
 
 - (void)actionPickerCancelled {

@@ -603,14 +603,4 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
 }
 
 
-- (void)dealloc 
-{
-	// Release allocated memory
-	self.drinks;
-	self.fruits;
-	self.snacks;
-	//[self.user release];
-}
-
-
 @end
