@@ -23,13 +23,13 @@
 }
 
 // getter/setter prototypes
-@property (nonatomic, retain) NSArray *locationNames;
-@property (nonatomic, retain) NSMutableArray *possibleTimes;
-@property (nonatomic, retain) NSString *location;
-@property (nonatomic, retain) NSDate *time;
-@property (nonatomic, retain) NSDate *date;
-@property (nonatomic, retain) NSMutableString *concat;
-@property (nonatomic, retain) NSMutableString *orderInfo;
+@property (nonatomic, strong) NSArray *locationNames;
+@property (nonatomic, strong) NSMutableArray *possibleTimes;
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSDate *time;
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSMutableString *concat;
+@property (nonatomic, strong) NSMutableString *orderInfo;
 @property (nonatomic, assign) int meal;
 
 // method prototypes

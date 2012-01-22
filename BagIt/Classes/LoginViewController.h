@@ -21,14 +21,14 @@
     UIActivityIndicatorView *cLoadingView;
     MBProgressHUD *loadingModal;
 }
-@property (retain, nonatomic) MBProgressHUD* loadingModal;
-@property (retain, nonatomic) IBOutlet     UITextField* username;
-@property (retain, nonatomic) IBOutlet     UITextField* password;
-@property (retain, nonatomic) NSString* orderInfo;
-@property (retain, nonatomic) UserInformation* user;
-@property (retain, nonatomic) NSMutableData* responseData;
-@property (retain, nonatomic) NSString* didWork;
-@property (nonatomic, retain) UIActivityIndicatorView *cLoadingView;
+@property (strong, nonatomic) MBProgressHUD* loadingModal;
+@property (strong, nonatomic) IBOutlet     UITextField* username;
+@property (strong, nonatomic) IBOutlet     UITextField* password;
+@property (strong, nonatomic) NSString* orderInfo;
+@property (strong, nonatomic) UserInformation* user;
+@property (strong, nonatomic) NSMutableData* responseData;
+@property (strong, nonatomic) NSString* didWork;
+@property (nonatomic, strong) UIActivityIndicatorView *cLoadingView;
 
 //- (void) keyboardWillShow:(NSNotification *)note;
 - (IBAction) submit:(id)sender;

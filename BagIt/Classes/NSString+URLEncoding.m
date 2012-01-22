@@ -19,10 +19,10 @@
  */
 + (NSString *)urlEncodeValue:(NSString *)str
 {
-	NSString *result = (NSString *) 
+	NSString *result = (__bridge_transfer NSString *) 
 	CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
-											(CFStringRef)str, NULL, CFSTR("?=&+"), kCFStringEncodingUTF8);
-	return [result autorelease];
+											(__bridge CFStringRef)str, NULL, CFSTR("?=&+"), kCFStringEncodingUTF8);
+	return result;
 }
 
 @end

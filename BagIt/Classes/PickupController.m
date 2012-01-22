@@ -60,8 +60,8 @@
 	
 	// initialize array of the times to display as strings, 
 	// including a empty "select" time
-	self.displayTimes = [[[NSMutableArray alloc] 
-						 initWithCapacity:[self.times count]] autorelease];
+	self.displayTimes = [[NSMutableArray alloc] 
+						 initWithCapacity:[self.times count]];
 	[self.displayTimes addObject:@"select"];
 	
 	// add times to display to an array
@@ -158,7 +158,6 @@
     [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedTimeIndex]];
     order.selectedPickupOptions = [[NSMutableArray alloc] initWithArray: selectedPickupOptions];
     
-    [selectedPickupOptions release];
     
 	// display either the breakfast item or sandwich item view,
 	// depending on meal
@@ -367,14 +366,13 @@
 // Release allocated memory
 - (void)dealloc 
 {
-    [self.pickupInfo release];
-    [self.locations release];
-	[self.dateKeys release];
-	[self.dateObjects release];
-	[self.displayTimes release];
-    [self.actionSheetPicker release];
+    self.pickupInfo;
+    self.locations;
+	self.dateKeys;
+	self.dateObjects;
+	self.displayTimes;
+    self.actionSheetPicker;
     //[self.user release];
-    [super dealloc];
 }
 
 #pragma - ActionSheetPickerDelegate

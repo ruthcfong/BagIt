@@ -71,7 +71,6 @@
             [message show];
             
             // release memory
-            [message release];
         }
         else
         {
@@ -85,7 +84,6 @@
         NSLog(@"%@", error);
     }
     
-    [error release];    
     
 }
 
@@ -121,7 +119,6 @@
 	[message show];
 	
 	// release memory
-	[message release];
 	
 	return;
 }
@@ -174,7 +171,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
         [myConnection start];
         
         // show loading modal
-        loadingModal = [[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES] retain];
+        loadingModal = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         loadingModal.labelText = @"Loading";
         
     }
@@ -183,7 +180,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     else if([title isEqualToString:@"Logout"])
     {
         // delete user information
-        [user release]; 
         
         // Go back to the root controller
         [self.navigationController popToRootViewControllerAnimated:NO];
@@ -236,7 +232,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 		// show error alert
 		[message show];
 		// Release memory
-		[message release];
 	}
 	else 
 	{
@@ -305,7 +300,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 	self.navigationItem.rightBarButtonItem = anotherButton;
 	
 	// Release allocated memory
-	[anotherButton release];
 }
 
 - (void)viewWillAppear:(BOOL)animated 
@@ -339,15 +333,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 }
 
 
-- (void)dealloc
-{	
-    [responseData release];
-    [dataArray release];
-    [thisConcat release];
-    //[responseData release];
-    
-	[super dealloc];
-}
 
 
 #pragma mark - UITableView delegate methods
@@ -372,7 +357,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
 	if (cell == nil)
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCustomCellID] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCustomCellID];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	}

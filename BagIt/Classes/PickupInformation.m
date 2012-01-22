@@ -234,16 +234,12 @@
 		[message show];
 		
 		// release memory used for the alert & method
-		[message release];
-		[errorMsg release];
-		[prefixes release];
 		
 		return nil;
 		
 	}
 	
 	// release memory
-	[prefixes release];	
 	
 	return concat;
 }

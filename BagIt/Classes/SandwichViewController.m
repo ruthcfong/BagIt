@@ -193,7 +193,6 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			 @"You must select at least one sandwich or salad" ];
 			
 			// release memory
-			[concat release];
 			
 			return nil;
 		}
@@ -378,8 +377,6 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 	}
 	
 	// release allocated memory
-	[sandwichPrefix release];
-	[prefixes release];
 	
 	// return concatenated string
 	return concat;
@@ -738,29 +735,28 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 - (void)dealloc 
 {
 	// Release allocated memory
-	[self.itemNames release];
-	[self.breads release];
-	[self.cheeses release];
-	[self.dressings release];
-    [self.itemLabel release];
-    [self.optionalLabel release];
-    [self.chefsNoteLabel release];
-    [self.itemText release];
-    [self.breadText release];
-    [self.cheeseText release];
-    [self.dressingText release];
-    [self.nextButton release];
-    [self.entreeOrdered release];
-    [self.orderInfo release];
-	[self.itemNames release];
-	[self.breads release];
-	[self.cheeses release];
-	[self.dressings release];
-    [self.dataArray release];
-    [self.itemNames release];
+	self.itemNames;
+	self.breads;
+	self.cheeses;
+	self.dressings;
+    self.itemLabel;
+    self.optionalLabel;
+    self.chefsNoteLabel;
+    self.itemText;
+    self.breadText;
+    self.cheeseText;
+    self.dressingText;
+    self.nextButton;
+    self.entreeOrdered;
+    self.orderInfo;
+	self.itemNames;
+	self.breads;
+	self.cheeses;
+	self.dressings;
+    self.dataArray;
+    self.itemNames;
 
     //[self.user release];
-    [super dealloc];
 }
 
 

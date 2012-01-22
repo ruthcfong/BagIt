@@ -16,12 +16,12 @@
     MBProgressHUD* loadingModal;
 }
 
-@property (retain, nonatomic) NSMutableData* data;
-@property (retain, nonatomic) NSString* didWork;
-@property (retain, nonatomic) UIViewController* viewController;
-@property (retain, nonatomic) UIViewController* nextViewController;
-@property (retain, nonatomic) UIAlertView *message;
-@property (retain, nonatomic) MBProgressHUD* loadingModal;
+@property (strong, nonatomic) NSMutableData* data;
+@property (strong, nonatomic) NSString* didWork;
+@property (strong, nonatomic) UIViewController* viewController;
+@property (strong, nonatomic) UIViewController* nextViewController;
+@property (strong, nonatomic) UIAlertView *message;
+@property (strong, nonatomic) MBProgressHUD* loadingModal;
 
 - (void)alertView:(UIAlertView *)alertView 
 clickedButtonAtIndex:(NSInteger)buttonIndex;

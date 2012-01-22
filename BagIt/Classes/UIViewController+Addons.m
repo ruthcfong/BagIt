@@ -28,7 +28,6 @@
 	[message show];
 	
 	// release memory
-	[message release];
 }
 
 @end

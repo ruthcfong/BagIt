@@ -223,7 +223,7 @@
     [myConnection start];
     
     // show loading modal
-    loadingModal = [[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES] retain];
+    loadingModal = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     loadingModal.labelText = @"Loading";
 }
 

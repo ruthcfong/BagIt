@@ -29,16 +29,16 @@
 
 @interface ActionSheetPicker()
 
-@property (nonatomic, retain) UIBarButtonItem *barButtonItem;
-@property (nonatomic, retain) NSArray *data;
-@property (nonatomic, retain) UIView *containerView;
+@property (nonatomic, strong) UIBarButtonItem *barButtonItem;
+@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, assign) id target;
+@property (nonatomic, unsafe_unretained) id target;
 @property (nonatomic, assign) SEL action;
-@property (nonatomic, retain) UIActionSheet *actionSheet;
-@property (nonatomic, retain) UIPopoverController *popOverController;
-@property (nonatomic, retain) NSObject *selfReference;
+@property (nonatomic, strong) UIActionSheet *actionSheet;
+@property (nonatomic, strong) UIPopoverController *popOverController;
+@property (nonatomic, strong) NSObject *selfReference;
 
 - (ActionSheetPicker *)initWithTarget:(id)target action:(SEL)action origin:(id)origin;
 
@@ -81,7 +81,7 @@
 
 
 + (id)showPickerWithTitle:(NSString *)title rows:(NSArray *)data initialSelection:(NSInteger)index target:(id)target action:(SEL)action origin:(id)origin {
-    ActionSheetPicker *picker = [[[ActionSheetPicker alloc] initWithTitle:title rows:data initialSelection:index target:target action:action origin:origin] autorelease];
+    ActionSheetPicker *picker = [[ActionSheetPicker alloc] initWithTitle:title rows:data initialSelection:index target:target action:action origin:origin];
     [picker showActionSheetPicker];
     return picker;
 }
@@ -115,15 +115,7 @@
 }
 
 - (void)dealloc {
-    self.actionSheet = nil;
-    self.popOverController = nil;
-    self.data = nil;
-    self.customButtons = nil;
-    self.pickerView = nil;
-    self.containerView = nil;
-    self.barButtonItem = nil;
     self.target = nil;
-    [super dealloc];
 }
 
 #pragma mark -
@@ -133,7 +125,7 @@
     if (!self.data)
         return nil;
     CGRect pickerFrame = CGRectMake(0, 40, self.viewSize.width, 216);
-    UIPickerView *stringPicker = [[[UIPickerView alloc] initWithFrame:pickerFrame] autorelease];
+    UIPickerView *stringPicker = [[UIPickerView alloc] initWithFrame:pickerFrame];
     stringPicker.delegate = self;
     stringPicker.dataSource = self;
     stringPicker.showsSelectionIndicator = YES;
@@ -149,7 +141,6 @@
         _customButtons = [[NSMutableArray alloc] init];
     
     [self.customButtons addObject:customButtonArray];
-    [customButtonArray release];
     
 }
 
@@ -162,7 +153,6 @@
     NSAssert(_pickerView != NULL, @"Picker view failed to instantiate, perhaps you have invalid component data.");
     [masterView addSubview:_pickerView];
     [self presentPickerForView:masterView];
-    [masterView release];
 }
 
 // subclasses should override this for custom behavior
@@ -241,7 +231,6 @@
     viewController.contentSizeForViewInPopover = viewController.view.frame.size;
     _popOverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
     [self presentPopover:_popOverController];
-    [viewController release];
 }
 
 - (void)presentPopover:(UIPopoverController *)popover {
@@ -297,7 +286,7 @@
 
 - (UIToolbar *)createPickerToolbarWithTitle:(NSString *)title  {
     CGRect frame = CGRectMake(0, 0, self.viewSize.width, 44);
-    UIToolbar *pickerToolbar = [[[UIToolbar alloc] initWithFrame:frame] autorelease];
+    UIToolbar *pickerToolbar = [[UIToolbar alloc] initWithFrame:frame];
     pickerToolbar.barStyle = UIBarStyleBlackOpaque;
     NSMutableArray *barItems = [[NSMutableArray alloc] init];
     
@@ -305,10 +294,10 @@
     if (nil != self.customButtons) {
         for (NSInteger i = 0; i < self.customButtons.count; i++) {
             //create the button
-            UIBarButtonItem *customButton = [[[UIBarButtonItem alloc] initWithTitle:[[self.customButtons objectAtIndex:i] objectAtIndex:0]
+            UIBarButtonItem *customButton = [[UIBarButtonItem alloc] initWithTitle:[[self.customButtons objectAtIndex:i] objectAtIndex:0]
                                                                               style:UIBarButtonItemStyleBordered 
                                                                              target:self 
-                                                                             action:@selector(customButtonPressed:)] autorelease];
+                                                                             action:@selector(customButtonPressed:)];
             //record associated customButtons index
             customButton.tag = i;
             
@@ -335,7 +324,6 @@
     [barItems addObject:doneButton];
     
     [pickerToolbar setItems:barItems animated:YES];
-    [barItems release];
     return pickerToolbar;
 }
 
@@ -346,13 +334,12 @@
     [toolBarItemlabel setFont:[UIFont boldSystemFontOfSize:16]];    
     [toolBarItemlabel setBackgroundColor:[UIColor clearColor]];    
     toolBarItemlabel.text = aTitle;    
-    UIBarButtonItem *buttonLabel = [[[UIBarButtonItem alloc]initWithCustomView:toolBarItemlabel] autorelease];
-    [toolBarItemlabel release];    
+    UIBarButtonItem *buttonLabel = [[UIBarButtonItem alloc]initWithCustomView:toolBarItemlabel];
     return buttonLabel;
 }
 
 - (UIBarButtonItem *)createButtonWithType:(UIBarButtonSystemItem)type target:(id)target action:(SEL)buttonAction {
-    return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:type target:target action:buttonAction] autorelease];
+    return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:type target:target action:buttonAction];
 }
 
 - (BOOL)isViewPortrait {

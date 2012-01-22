@@ -46,7 +46,6 @@
             [message show];
             
             // release memory
-            [message release];
 
 			// display the view
 			[_viewController.navigationController pushViewController:_nextViewController 

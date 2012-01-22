@@ -14,8 +14,8 @@
     NSString* pin;
 }
 
-@property (nonatomic, retain)     NSString* huid;
-@property (nonatomic, retain)     NSString* pin;
+@property (nonatomic, strong)     NSString* huid;
+@property (nonatomic, strong)     NSString* pin;
 
 - (id) initWithHUID: (NSString*) username andPIN: (NSString*) password;
 - (id) initWithUser: (UserInformation*) otherUser;

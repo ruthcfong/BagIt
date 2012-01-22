@@ -23,7 +23,7 @@
 - (NSString*) toHUDSDate
 {	
 	// create NSDateFormatter object
-	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	
 	// set date format
 	[formatter setDateFormat:@"yyyy-MM-dd"];
@@ -44,7 +44,7 @@
 - (NSString*) toHUDSTime
 {	
 	// create NSDateFormatter object
-	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	
 	// set date format
 	[formatter setDateFormat:@"HHmm"];
@@ -65,7 +65,7 @@
 - (NSString*) toTime
 {	
 	// create NSDateFormatter object
-	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	
 	// set date format
 	[formatter setDateFormat:@"h:mm a"];
@@ -85,7 +85,7 @@
 - (NSString*) toDate
 {
 	// create NSDateFormatter object
-	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	
 	// set date format
 	[formatter setDateFormat:@"EEEE, MMMM d"];

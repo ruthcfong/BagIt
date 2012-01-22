@@ -36,10 +36,10 @@
 
 @interface ActionSheetPicker : NSObject <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (nonatomic, assign) id<ActionSheetPickerDelegate> delegate;
-@property (nonatomic, retain) UIView *pickerView;
+@property (nonatomic, unsafe_unretained) id<ActionSheetPickerDelegate> delegate;
+@property (nonatomic, strong) UIView *pickerView;
 @property (nonatomic, readonly) CGSize viewSize;
-@property (nonatomic, retain) NSMutableArray *customButtons; // ((NSString *title, id value),(NSString *title, id value), ... )
+@property (nonatomic, strong) NSMutableArray *customButtons; // ((NSString *title, id value),(NSString *title, id value), ... )
 @property (nonatomic, assign) BOOL hideCancel;
 
 /* Create and display an action sheet picker. The returned picker is autoreleased. 

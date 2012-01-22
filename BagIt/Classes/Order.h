@@ -25,17 +25,17 @@
 }
 
 @property (nonatomic, assign) int typeOfMeal;
-@property (retain, nonatomic) NSString* orderURL;
-@property (retain, nonatomic) NSString* orderInformation;
-@property (retain, nonatomic) NSMutableString* breakfastOrder;
-@property (retain, nonatomic) NSMutableString* entree1Order;
-@property (retain, nonatomic) NSMutableString* entree2Order;
-@property (retain, nonatomic) NSMutableString* sideOrder;
-@property (retain, nonatomic) NSMutableArray* selectedBreakfastItems;    
-@property (retain, nonatomic) NSMutableArray* selectedSideIndices;
-@property (retain, nonatomic) NSMutableArray* selectedEntree1Indices;
-@property (retain, nonatomic) NSMutableArray* selectedEntree2Indices;
-@property (retain, nonatomic) NSMutableArray* selectedPickupOptions;
+@property (strong, nonatomic) NSString* orderURL;
+@property (strong, nonatomic) NSString* orderInformation;
+@property (strong, nonatomic) NSMutableString* breakfastOrder;
+@property (strong, nonatomic) NSMutableString* entree1Order;
+@property (strong, nonatomic) NSMutableString* entree2Order;
+@property (strong, nonatomic) NSMutableString* sideOrder;
+@property (strong, nonatomic) NSMutableArray* selectedBreakfastItems;    
+@property (strong, nonatomic) NSMutableArray* selectedSideIndices;
+@property (strong, nonatomic) NSMutableArray* selectedEntree1Indices;
+@property (strong, nonatomic) NSMutableArray* selectedEntree2Indices;
+@property (strong, nonatomic) NSMutableArray* selectedPickupOptions;
 
 - (id)initWithMeal: (int) selectedMeal;
 

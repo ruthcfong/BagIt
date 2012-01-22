@@ -21,9 +21,9 @@
 }
 
 // getter/setter prototypes
-@property (nonatomic, retain) IBOutlet PickupController *pickupController;
-@property (nonatomic, retain) NSArray *meals;
-@property (nonatomic, retain) UserInformation* user;
-@property (nonatomic, retain) Order* order;
+@property (nonatomic, strong) IBOutlet PickupController *pickupController;
+@property (nonatomic, strong) NSArray *meals;
+@property (nonatomic, strong) UserInformation* user;
+@property (nonatomic, strong) Order* order;
 
 @end

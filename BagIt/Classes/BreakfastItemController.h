@@ -30,18 +30,18 @@
 }
 
 // declare setters/getters methods
-@property (nonatomic, retain) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 @property NSInteger selected;
-@property (nonatomic, retain) NSString *pickupConcat;
-@property (nonatomic, retain) NSString *prevOrderInfo;
-@property (nonatomic, retain) NSMutableString *orderInfo;
-@property (nonatomic, retain) NSMutableString *foodsOrdered;
-@property (nonatomic, retain) NSString *thisConcat;
-@property (nonatomic, retain) UserInformation* user;
-@property (retain, nonatomic) NSMutableData* responseData;
-@property (retain, nonatomic) NSString* dWork;
-@property (nonatomic, retain) Order* order;
-@property (nonatomic, retain) MBProgressHUD* loadingModal;
+@property (nonatomic, strong) NSString *pickupConcat;
+@property (nonatomic, strong) NSString *prevOrderInfo;
+@property (nonatomic, strong) NSMutableString *orderInfo;
+@property (nonatomic, strong) NSMutableString *foodsOrdered;
+@property (nonatomic, strong) NSString *thisConcat;
+@property (nonatomic, strong) UserInformation* user;
+@property (strong, nonatomic) NSMutableData* responseData;
+@property (strong, nonatomic) NSString* dWork;
+@property (nonatomic, strong) Order* order;
+@property (nonatomic, strong) MBProgressHUD* loadingModal;
 
 // method prototypes
 - (void) done;

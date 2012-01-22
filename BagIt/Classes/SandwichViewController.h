@@ -32,31 +32,31 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *itemLabel;
-@property (nonatomic, retain) IBOutlet UILabel *optionalLabel;
-@property (nonatomic, retain) IBOutlet UILabel *chefsNoteLabel;
-@property (nonatomic, retain) IBOutlet UITextField *itemText;
-@property (nonatomic, retain) IBOutlet UITextField *breadText;
-@property (nonatomic, retain) IBOutlet UITextField *cheeseText;
-@property (nonatomic, retain) IBOutlet UITextField *dressingText;
-@property (nonatomic, retain) IBOutlet UIButton *nextButton;
+@property (nonatomic, strong) IBOutlet UILabel *itemLabel;
+@property (nonatomic, strong) IBOutlet UILabel *optionalLabel;
+@property (nonatomic, strong) IBOutlet UILabel *chefsNoteLabel;
+@property (nonatomic, strong) IBOutlet UITextField *itemText;
+@property (nonatomic, strong) IBOutlet UITextField *breadText;
+@property (nonatomic, strong) IBOutlet UITextField *cheeseText;
+@property (nonatomic, strong) IBOutlet UITextField *dressingText;
+@property (nonatomic, strong) IBOutlet UIButton *nextButton;
 @property (nonatomic, assign) BOOL isFirstSandwich;
 @property (nonatomic, assign) BOOL selectedChefs;
-@property (nonatomic, retain) NSString *previousConcat;
-@property (nonatomic, retain) NSString *prevOrderInfo;
-@property (nonatomic, retain) NSMutableString *orderInfo;
-@property (nonatomic, retain) NSMutableString *entreeOrdered;
-@property (nonatomic, retain) UserInformation* user;
-@property (nonatomic, retain) Order* order;
+@property (nonatomic, strong) NSString *previousConcat;
+@property (nonatomic, strong) NSString *prevOrderInfo;
+@property (nonatomic, strong) NSMutableString *orderInfo;
+@property (nonatomic, strong) NSMutableString *entreeOrdered;
+@property (nonatomic, strong) UserInformation* user;
+@property (nonatomic, strong) Order* order;
 
 @property (nonatomic, assign) NSInteger selectedIndex;
-@property (nonatomic, retain) NSArray *dataArray;
-@property (nonatomic, retain) NSMutableArray *itemNames;
-@property (nonatomic, retain) NSArray *breads;
+@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *itemNames;
+@property (nonatomic, strong) NSArray *breads;
 @property (nonatomic, assign) NSInteger	selectedBreadIndex;
-@property (nonatomic, retain) NSArray *cheeses;
+@property (nonatomic, strong) NSArray *cheeses;
 @property (nonatomic, assign) NSInteger selectedCheeseIndex;
-@property (nonatomic, retain) NSArray *dressings;
+@property (nonatomic, strong) NSArray *dressings;
 @property (nonatomic, assign) NSInteger selectedDressingIndex;
 
 - (IBAction) next;

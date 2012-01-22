@@ -94,7 +94,6 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
             [message show];
             
             // release memory
-            [message release];
         }
         else
         {
@@ -108,7 +107,6 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
         NSLog(@"%@", error);
     }
     
-    [error release];
     
 }
 
@@ -217,7 +215,6 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
 	// Show Submit popup alert
 	[self showSubmitAlert];
 	// Release memory
-	[arrOfSides release];
 	
 	// Return concatenated string
 	return concat;
@@ -247,7 +244,6 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
 	[message show];
 	
 	// release memory
-	[message release];
 	
 	return;
 }
@@ -317,7 +313,7 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
         [myConnection start];
         
         // show loading modal
-        loadingModal = [[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES] retain];
+        loadingModal = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         loadingModal.labelText = @"Loading";
     }
     
@@ -325,7 +321,6 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
     else if([title isEqualToString:@"Logout"])
     {
         // delete user information
-        [user release];
         
         
         // Go back to the root controller
@@ -611,11 +606,10 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
 - (void)dealloc 
 {
 	// Release allocated memory
-	[self.drinks release];
-	[self.fruits release];
-	[self.snacks release];
+	self.drinks;
+	self.fruits;
+	self.snacks;
 	//[self.user release];
-    [super dealloc];
 }
 
 

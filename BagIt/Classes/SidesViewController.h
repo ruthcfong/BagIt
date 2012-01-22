@@ -35,26 +35,26 @@
 }
 
 // getter/setter prototypes
-@property (nonatomic, retain) IBOutlet UITextField *drinkText;
-@property (nonatomic, retain) IBOutlet UITextField *fruitText;
-@property (nonatomic, retain) IBOutlet UITextField *snack1Text;
-@property (nonatomic, retain) IBOutlet UITextField *snack2Text;
-@property (nonatomic, retain) NSString *previousConcat;
-@property (nonatomic, retain) NSString *thisConcat;
-@property (nonatomic, retain) NSMutableString *prevOrderInfo;
-@property (nonatomic, retain) NSMutableString *orderInfo;
-@property (retain, nonatomic) NSMutableData* data;
-@property (retain, nonatomic) NSString* didWork;
-@property (retain, readwrite, nonatomic) UserInformation* user;
-@property (retain, nonatomic) Order* order;
-@property (retain, nonatomic) NSMutableString* foodsOrdered;
-@property (retain, nonatomic) MBProgressHUD* loadingModal;
+@property (nonatomic, strong) IBOutlet UITextField *drinkText;
+@property (nonatomic, strong) IBOutlet UITextField *fruitText;
+@property (nonatomic, strong) IBOutlet UITextField *snack1Text;
+@property (nonatomic, strong) IBOutlet UITextField *snack2Text;
+@property (nonatomic, strong) NSString *previousConcat;
+@property (nonatomic, strong) NSString *thisConcat;
+@property (nonatomic, strong) NSMutableString *prevOrderInfo;
+@property (nonatomic, strong) NSMutableString *orderInfo;
+@property (strong, nonatomic) NSMutableData* data;
+@property (strong, nonatomic) NSString* didWork;
+@property (strong, readwrite, nonatomic) UserInformation* user;
+@property (strong, nonatomic) Order* order;
+@property (strong, nonatomic) NSMutableString* foodsOrdered;
+@property (strong, nonatomic) MBProgressHUD* loadingModal;
 
-@property (nonatomic, retain) NSArray *drinks;
+@property (nonatomic, strong) NSArray *drinks;
 @property (nonatomic, assign) NSInteger	selectedDrinkIndex;
-@property (nonatomic, retain) NSArray *fruits;
+@property (nonatomic, strong) NSArray *fruits;
 @property (nonatomic, assign) NSInteger selectedFruitIndex;
-@property (nonatomic, retain) NSArray *snacks;
+@property (nonatomic, strong) NSArray *snacks;
 @property (nonatomic, assign) NSInteger selectedSnack1Index;
 @property (nonatomic, assign) NSInteger selectedSnack2Index;
 

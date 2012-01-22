@@ -28,23 +28,23 @@
 }
 
 // getter/setter prototypes
-@property (nonatomic, retain) SandwichViewController *sandwichController;
-@property (nonatomic, retain) BreakfastItemController *breakfastItemController;
-@property (nonatomic, retain) PickupInformation *pickupInfo;
-@property (nonatomic, retain) IBOutlet UITextField *locationText;
-@property (nonatomic, retain) IBOutlet UITextField *dateText;
-@property (nonatomic, retain) IBOutlet UITextField *timeText;
-@property (nonatomic, retain) NSArray *locations;
-@property (nonatomic, retain) NSArray *times;
-@property (nonatomic, retain) NSMutableArray *displayTimes;
-@property (nonatomic, retain) NSMutableArray *dateKeys;
-@property (nonatomic, retain) NSMutableArray *dateObjects;
+@property (nonatomic, strong) SandwichViewController *sandwichController;
+@property (nonatomic, strong) BreakfastItemController *breakfastItemController;
+@property (nonatomic, strong) PickupInformation *pickupInfo;
+@property (nonatomic, strong) IBOutlet UITextField *locationText;
+@property (nonatomic, strong) IBOutlet UITextField *dateText;
+@property (nonatomic, strong) IBOutlet UITextField *timeText;
+@property (nonatomic, strong) NSArray *locations;
+@property (nonatomic, strong) NSArray *times;
+@property (nonatomic, strong) NSMutableArray *displayTimes;
+@property (nonatomic, strong) NSMutableArray *dateKeys;
+@property (nonatomic, strong) NSMutableArray *dateObjects;
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, assign) NSInteger selectedTimeIndex;
 @property (nonatomic, assign) NSInteger selectedDateIndex;
-@property (nonatomic, retain) ActionSheetPicker *actionSheetPicker;
-@property (nonatomic, retain) UserInformation *user;
-@property (nonatomic, retain) Order *order;
+@property (nonatomic, strong) ActionSheetPicker *actionSheetPicker;
+@property (nonatomic, strong) UserInformation *user;
+@property (nonatomic, strong) Order *order;
 
 // method prototypes
 - (IBAction)next:(id)sender;
