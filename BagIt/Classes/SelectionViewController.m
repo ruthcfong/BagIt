@@ -30,7 +30,7 @@
 	
 	// initialize and fill meal array with the different types of meals
 	self.meals = [[NSArray alloc] initWithObjects:
-				  @"Breakfast", @"Lunch", @"Dinner", @"Favorites", nil];
+				  @"Breakfast", @"Lunch", @"Dinner", nil]; //@"Favorites", nil];
 	
 	// set the title of the view
 	self.title = @"Select a Meal";
