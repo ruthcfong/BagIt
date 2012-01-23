@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 #import "UserInformation.h"
-#import "Order.h"
 
 @interface SandwichViewController : UIViewController 
 {
@@ -27,7 +26,6 @@
 	NSString *prevOrderInfo;
 	NSMutableString *orderInfo;
     UserInformation* user;
-    Order* order;
     NSMutableString* entreeOrdered;
 
 }
@@ -47,7 +45,6 @@
 @property (nonatomic, strong) NSMutableString *orderInfo;
 @property (nonatomic, strong) NSMutableString *entreeOrdered;
 @property (nonatomic, strong) UserInformation* user;
-@property (nonatomic, strong) Order* order;
 
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, strong) NSArray *dataArray;

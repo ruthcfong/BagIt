@@ -13,17 +13,15 @@
 #import	"SidesViewController.h"
 #import "Constants.h"
 #import "NSString+URLEncoding.h"
-//#import "UIViewController+Addons.h"
 #import "NSObject+Addons.h"
 #import "UserInformation.h"
 #import "PickupController.h"
-#import "Order.h"
 
 @implementation SandwichViewController
 
 // instance variables
 @synthesize itemLabel, optionalLabel, chefsNoteLabel, itemText, breadText, 
-cheeseText, dressingText, nextButton, order, entreeOrdered, 
+cheeseText, dressingText, nextButton, entreeOrdered, 
 isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 
 @synthesize selectedIndex = _selectedIndex;
@@ -110,9 +108,6 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			            
             // pass user and order information to next sandwich's controller
             sandwichController2.user = user;
-            order.selectedEntree1Indices = selectedEntreeOptions;
-            order.entree1Order = entreeOrdered; //[[NSMutableString alloc] initWithString:entreeOrdered];
-            sandwichController2.order = order;
             
 			// display the next screen
 			[self.navigationController pushViewController:sandwichController2 
@@ -139,11 +134,8 @@ isFirstSandwich, selectedChefs, previousConcat, prevOrderInfo, orderInfo, user;
 			// set the view controller's title
 			sidesViewController.title = @"Sides";
 			
-            // pass user & order information to the side view & remember the order 
+            // pass user to the side view 
             sidesViewController.user = user;
-            order.selectedEntree2Indices = selectedEntreeOptions;
-            order.entree2Order = entreeOrdered;
-            sidesViewController.order = order;
             
 			// display the view
 			[self.navigationController pushViewController:sidesViewController 

@@ -12,13 +12,12 @@
 #import "Constants.h"
 #import "UserInformation.h"
 #import "SelectionViewController.h"
-#import "Order.h"
 
 @implementation PickupController
 
 // instance variables
 @synthesize pickupInfo, locationText, dateText, timeText,
-	breakfastItemController, sandwichController, user, order;
+	breakfastItemController, sandwichController, user;
 
 @synthesize locations = _locations;
 @synthesize times = _times;
@@ -149,15 +148,6 @@
 		pickupInfo.time = [pickupInfo.possibleTimes objectAtIndex: 
 						   self.selectedTimeIndex-1];
 	}
-	
-    
-    // save pickup options
-    NSMutableArray* selectedPickupOptions = [[NSMutableArray alloc] initWithCapacity:4];
-    [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedIndex]];
-    [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedDateIndex]];
-    [selectedPickupOptions addObject:[[NSNumber alloc] initWithInt:self.selectedTimeIndex]];
-    order.selectedPickupOptions = [[NSMutableArray alloc] initWithArray: selectedPickupOptions];
-    
     
 	// display either the breakfast item or sandwich item view,
 	// depending on meal
@@ -184,9 +174,8 @@
 			// set the view controller's title
 			breakfastItemController.title = @"Select 5 items";
 			
-            // pass user and order information to breakfast view
+            // pass user information to breakfast view
             breakfastItemController.user = user;
-            breakfastItemController.order = order;
             
             // display the view
 			[self.navigationController pushViewController:breakfastItemController 
@@ -215,9 +204,8 @@
 			// pass the sandwich controller the order information
 			sandwichController.prevOrderInfo = [pickupInfo orderInfo];
 			
-            // pass user and order information to sandwich view
+            // pass user to sandwich view
             sandwichController.user = user;
-            sandwichController.order = order;
             
 			// set the view controller's title
 			sandwichController.title = @"Entree 1";

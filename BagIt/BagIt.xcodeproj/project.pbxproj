@@ -13,9 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		9B0A5D2F14C4DBA300B07FBB /* UIViewController+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A5D2E14C4DBA300B07FBB /* UIViewController+Addons.m */; };
 		9B0A5D3214C4DDB100B07FBB /* NSObject+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A5D3114C4DDB100B07FBB /* NSObject+Addons.m */; };
 		9B356E9F14C9DBAE002911A7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B356E9E14C9DBAE002911A7 /* MBProgressHUD.m */; };
 		9B356EB314CA2204002911A7 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B356EB114CA2204002911A7 /* DoneUp.png */; };
@@ -25,10 +23,8 @@
 		9B65828714C3AE00001DB11F /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65828614C3AE00001DB11F /* UserInformation.m */; };
 		9B65828D14C3AF89001DB11F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65828B14C3AF89001DB11F /* LoginViewController.m */; };
 		9B65828E14C3AF89001DB11F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B65828C14C3AF89001DB11F /* LoginViewController.xib */; };
-		9B65829114C3AFBC001DB11F /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65829014C3AFBC001DB11F /* ConnectionDelegate.m */; };
 		9B65829614C3E48E001DB11F /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65829414C3E48E001DB11F /* SelectionViewController.m */; };
 		9B65829714C3E48E001DB11F /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B65829514C3E48E001DB11F /* SelectionViewController.xib */; };
-		9B86FECB14C88C1900831870 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B86FEC914C88C1900831870 /* Order.m */; };
 		9B8A5DC7148F3E6A0033996D /* PickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC5148F3E6A0033996D /* PickupController.m */; };
 		9B8A5DC8148F3E6A0033996D /* PickupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8A5DC6148F3E6A0033996D /* PickupController.xib */; };
 		9B8A5DD4148F3EF80033996D /* ActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A5DD3148F3EF80033996D /* ActionSheetPicker.m */; };
@@ -67,13 +63,9 @@
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* BagIt_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagIt_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BagIt-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BagIt-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		9B0A5D2D14C4DBA300B07FBB /* UIViewController+Addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Addons.h"; sourceTree = "<group>"; };
-		9B0A5D2E14C4DBA300B07FBB /* UIViewController+Addons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Addons.m"; sourceTree = "<group>"; };
 		9B0A5D3014C4DDB100B07FBB /* NSObject+Addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addons.h"; sourceTree = "<group>"; };
 		9B0A5D3114C4DDB100B07FBB /* NSObject+Addons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addons.m"; sourceTree = "<group>"; };
 		9B356E9D14C9DBAE002911A7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -87,13 +79,9 @@
 		9B65828A14C3AF89001DB11F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9B65828B14C3AF89001DB11F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9B65828C14C3AF89001DB11F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Classes/LoginViewController.xib; sourceTree = "<group>"; };
-		9B65828F14C3AFBC001DB11F /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
-		9B65829014C3AFBC001DB11F /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionDelegate.m; sourceTree = "<group>"; };
 		9B65829314C3E48E001DB11F /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
 		9B65829414C3E48E001DB11F /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		9B65829514C3E48E001DB11F /* SelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionViewController.xib; sourceTree = "<group>"; };
-		9B86FEC914C88C1900831870 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
-		9B86FECA14C88C1900831870 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		9B8A5DBC148F3E140033996D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9B8A5DC4148F3E6A0033996D /* PickupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupController.h; sourceTree = "<group>"; };
 		9B8A5DC5148F3E6A0033996D /* PickupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupController.m; sourceTree = "<group>"; };
@@ -161,8 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9B356E9C14C9DB81002911A7 /* Progress Modal */,
-				9B6221C614C88728005F3D47 /* OrderInformation */,
-				9B0A5D2C14C4DB6500B07FBB /* New Group */,
+				9B0A5D2C14C4DB6500B07FBB /* NSObject+Addons */,
 				9BF2CB0D14C4CCD7000E5BAD /* CJSONDeserializer */,
 				9B65829214C3E471001DB11F /* Selection */,
 				9B65828914C3AF69001DB11F /* Login */,
@@ -175,8 +162,6 @@
 				9B8A5DD1148F3EEA0033996D /* ActionSheetPicker */,
 				9B8A5DC3148F3E540033996D /* Pickup */,
 				9B8A5DBB148F3E000033996D /* Constants */,
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* BagItAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BagItAppDelegate.m */,
 			);
@@ -245,15 +230,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9B0A5D2C14C4DB6500B07FBB /* New Group */ = {
+		9B0A5D2C14C4DB6500B07FBB /* NSObject+Addons */ = {
 			isa = PBXGroup;
 			children = (
-				9B0A5D2D14C4DBA300B07FBB /* UIViewController+Addons.h */,
-				9B0A5D2E14C4DBA300B07FBB /* UIViewController+Addons.m */,
 				9B0A5D3014C4DDB100B07FBB /* NSObject+Addons.h */,
 				9B0A5D3114C4DDB100B07FBB /* NSObject+Addons.m */,
 			);
-			name = "New Group";
+			name = "NSObject+Addons";
 			sourceTree = "<group>";
 		};
 		9B356E9C14C9DB81002911A7 /* Progress Modal */ = {
@@ -263,15 +246,6 @@
 				9B356E9E14C9DBAE002911A7 /* MBProgressHUD.m */,
 			);
 			name = "Progress Modal";
-			sourceTree = "<group>";
-		};
-		9B6221C614C88728005F3D47 /* OrderInformation */ = {
-			isa = PBXGroup;
-			children = (
-				9B86FEC914C88C1900831870 /* Order.m */,
-				9B86FECA14C88C1900831870 /* Order.h */,
-			);
-			name = OrderInformation;
 			sourceTree = "<group>";
 		};
 		9B65828814C3AE9A001DB11F /* UserInformation */ = {
@@ -288,8 +262,6 @@
 			children = (
 				9B65828A14C3AF89001DB11F /* LoginViewController.h */,
 				9B65828B14C3AF89001DB11F /* LoginViewController.m */,
-				9B65828F14C3AFBC001DB11F /* ConnectionDelegate.h */,
-				9B65829014C3AFBC001DB11F /* ConnectionDelegate.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -487,7 +459,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BagItAppDelegate.m in Sources */,
-				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				9B8A5DC7148F3E6A0033996D /* PickupController.m in Sources */,
 				9B8A5DD4148F3EF80033996D /* ActionSheetPicker.m in Sources */,
 				9B8A5DD9148F3F550033996D /* PickupInformation.m in Sources */,
@@ -499,7 +470,6 @@
 				9BA3AEEB149074D9008046FA /* NSString+URLEncoding.m in Sources */,
 				9B65828714C3AE00001DB11F /* UserInformation.m in Sources */,
 				9B65828D14C3AF89001DB11F /* LoginViewController.m in Sources */,
-				9B65829114C3AFBC001DB11F /* ConnectionDelegate.m in Sources */,
 				9B65829614C3E48E001DB11F /* SelectionViewController.m in Sources */,
 				9BF2CB1014C4CCED000E5BAD /* CJSONDeserializer.m in Sources */,
 				9BF2CB1914C4D0B0000E5BAD /* CSerializedJSONData.m in Sources */,
@@ -511,9 +481,7 @@
 				9BF2CB2914C4D16A000E5BAD /* NSDictionary_JSONExtensions.m in Sources */,
 				9BF2CB2A14C4D16A000E5BAD /* NSCharacterSet_Extensions.m in Sources */,
 				9BF2CB2B14C4D16A000E5BAD /* CDataScanner_Extensions.m in Sources */,
-				9B0A5D2F14C4DBA300B07FBB /* UIViewController+Addons.m in Sources */,
 				9B0A5D3214C4DDB100B07FBB /* NSObject+Addons.m in Sources */,
-				9B86FECB14C88C1900831870 /* Order.m in Sources */,
 				9B356E9F14C9DBAE002911A7 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,7 +502,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BagIt-Info.plist";
 				PRODUCT_NAME = BagIt;
-				VALIDATE_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -557,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;

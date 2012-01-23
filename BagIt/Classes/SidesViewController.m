@@ -24,7 +24,7 @@
 
 // synthesize instance variables
 @synthesize drinkText, fruitText, snack1Text, snack2Text, previousConcat, 
-thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal, order;
+thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal;
 
 // synthesize private variables
 @synthesize drinks = _drinks;
@@ -229,8 +229,6 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
  */
 - (void) showSubmitAlert
 {
-    // remember the sides ordered
-    order.sideOrder = [[NSMutableString alloc] initWithString:orderInfo];
 	// synthesize order information to display in popup message
 	[orderInfo insertString:prevOrderInfo atIndex:BEGINNING];
 	
@@ -273,19 +271,10 @@ thisConcat, prevOrderInfo, orderInfo, foodsOrdered, user, didWork, loadingModal,
         [selectedSideOptions addObject:[[NSNumber alloc] initWithInt:self.selectedSnack1Index]];
         [selectedSideOptions addObject:[[NSNumber alloc] initWithInt:self.selectedSnack2Index]];
         
-        order.selectedSideIndices = selectedSideOptions;
-        
+        // generate the url that represents the order
         NSString* getURL = [NSString stringWithFormat:@"http://www.dining.harvard.edu/myhuds/students/%@%@",previousConcat, thisConcat];
-        
-       // NSLog(@"%@", getURL);
-        
-        // remember the custom URL & human-readable string that represent the order
-        order.orderURL = getURL;
-        order.orderInformation = orderInfo;
-        
-        //NSLog(@"%@", order.orderInformation);
-        
-        // remember the url
+                
+        // remember the url that of the authentication script
         NSURL *url = [NSURL URLWithString: @"https://cloud.cs50.net/~ruthfong/pin.php"]; 
         
         // setup the request

@@ -13,11 +13,10 @@
 #import "CJSONDeserializer.h"
 #import "ConnectionDelegate.h"
 #import "NSObject+Addons.h"
-#import "Order.h"
 
 @implementation BreakfastItemController
 
-@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, order, foodsOrdered, loadingModal, responseData;
+@synthesize dataArray, selected, pickupConcat, prevOrderInfo, orderInfo, thisConcat, user, dWork, foodsOrdered, loadingModal, responseData;
 
 - (id)init
 {

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
-#import "Order.h"
 #import "MBProgressHUD.h"
 
 @interface BreakfastItemController : UITableViewController <UITableViewDelegate>
@@ -25,7 +24,6 @@
     UserInformation* user;
     NSMutableData* responseData;
     NSString* dWork;
-    Order* order;
     MBProgressHUD* loadingModal;
 }
 
@@ -40,7 +38,6 @@
 @property (nonatomic, strong) UserInformation* user;
 @property (strong, nonatomic) NSMutableData* responseData;
 @property (strong, nonatomic) NSString* dWork;
-@property (nonatomic, strong) Order* order;
 @property (nonatomic, strong) MBProgressHUD* loadingModal;
 
 // method prototypes

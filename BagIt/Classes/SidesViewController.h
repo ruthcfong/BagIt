@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInformation.h"
-#import "Order.h"
 #import "MBProgressHUD.h"
 
 @interface SidesViewController : UIViewController <UIAlertViewDelegate> 
@@ -28,7 +27,6 @@
     //UserInformation *user;
     NSString* didWork;
     UserInformation* user;
-    Order* order;
     NSMutableString* foodsOrdered;
     MBProgressHUD* loadingModal;
 
@@ -46,7 +44,6 @@
 @property (strong, nonatomic) NSMutableData* data;
 @property (strong, nonatomic) NSString* didWork;
 @property (strong, readwrite, nonatomic) UserInformation* user;
-@property (strong, nonatomic) Order* order;
 @property (strong, nonatomic) NSMutableString* foodsOrdered;
 @property (strong, nonatomic) MBProgressHUD* loadingModal;
 

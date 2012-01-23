@@ -8,12 +8,11 @@
 
 #import "SelectionViewController.h"
 #import "PickupController.h"
-#import "Order.h"
 #import "Constants.h"
 
 @implementation SelectionViewController
 
-@synthesize meals, pickupController, user, order;
+@synthesize meals, pickupController, user;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -108,9 +107,6 @@
 		case DINNER:
 			pickupController.title = @"Dinner";
 			break;
-        case FAVORITES:
-            NSLog(@"Favorites selected.");
-            break;
 		default:
 			pickupController.title = @"Error";
 			break;
@@ -118,18 +114,12 @@
         
     // pass user information to pickup view
     pickupController.user = user;
-	
-    if (indexPath.row != FAVORITES) 
-    {
-        // instantiate object to represent the order and pass it to the pickup view
-        order = [[Order alloc] initWithMeal:indexPath.row];
-        pickupController.order = order;
-        
-        // Pass the selected object to the new view controller.
-        [self.navigationController pushViewController:pickupController animated:YES];
-    }
-	
-	// Release controller
+    
+    // display pickup screen
+    [self.navigationController pushViewController:pickupController 
+                                         animated:YES];
+
+		
 }
 
 
@@ -149,7 +139,6 @@
 	self.meals = nil;
 	self.pickupController = nil;
     self.user = nil;
-    self.order = nil;
 }
 
 

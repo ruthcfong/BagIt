@@ -12,7 +12,6 @@
 #import "BreakfastItemController.h"
 #import "SandwichViewController.h"
 #import "UserInformation.h"
-#import "Order.h"
 
 @interface PickupController : UIViewController <UITextFieldDelegate, ActionSheetPickerDelegate>
 {
@@ -24,7 +23,6 @@
 	BreakfastItemController *breakfastItemController;
 	SandwichViewController *sandwichController;
     UserInformation* user;
-    Order* order;
 }
 
 // getter/setter prototypes
@@ -44,7 +42,6 @@
 @property (nonatomic, assign) NSInteger selectedDateIndex;
 @property (nonatomic, strong) ActionSheetPicker *actionSheetPicker;
 @property (nonatomic, strong) UserInformation *user;
-@property (nonatomic, strong) Order *order;
 
 // method prototypes
 - (IBAction)next:(id)sender;
